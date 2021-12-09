@@ -11,25 +11,21 @@ interface DoubleLinkedListI<T> extends NewDS<T> {
 }
 
 class DllNode<T> {
-  private next: DllNode<T>;
-  private previous: DllNode<T>;
+  private next: DllNode<T> | null;
+  private previous: DllNode<T> | null;
   private data: T;
 
-  constructor(previous: DllNode<T>, data: T, next: DllNode<T>) {
+  constructor(previous: DllNode<T> | null, data: T, next: DllNode<T> | null) {
     this.next = next;
     this.previous = previous;
     this.data = data;
   }
 
-  public toString = () => {
-    return this.data.toString();
-  };
-
-  public getNext(): DllNode<T> {
+  public getNext(): DllNode<T> | null {
     return this.next;
   }
 
-  public getPrevious(): DllNode<T> {
+  public getPrevious(): DllNode<T> | null {
     return this.previous;
   }
 
@@ -37,11 +33,11 @@ class DllNode<T> {
     return this.data;
   }
 
-  public setNext(value: DllNode<T>) {
+  public setNext(value: DllNode<T> | null) {
     this.next = value;
   }
 
-  public setPrevious(value: DllNode<T>) {
+  public setPrevious(value: DllNode<T> | null) {
     this.previous = value;
   }
 
@@ -50,10 +46,10 @@ class DllNode<T> {
   }
 }
 
-class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
+export class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
   private llSize: number = 0;
-  private head: DllNode<T> = null;
-  private tail: DllNode<T> = null;
+  private head: DllNode<T> | null = null;
+  private tail: DllNode<T> | null = null;
 
   addLast(elem: T): void {
     if (this.isEmpty()) {
@@ -62,9 +58,9 @@ class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
       const newTail: DllNode<T> = new DllNode<T>(
         this.tail,
         elem,
-        this.tail.getNext()
+        this.tail!.getNext()
       );
-      this.tail.setNext(newTail);
+      this.tail!.setNext(newTail);
       this.tail = newTail;
     }
 
@@ -75,36 +71,36 @@ class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
       this.head = this.tail = new DllNode<T>(null, elem, null);
     } else {
       const newHead: DllNode<T> = new DllNode<T>(
-        this.head.getPrevious(),
+        this.head!.getPrevious(),
         elem,
         this.head
       );
 
-      this.head.setPrevious(newHead);
+      this.head!.setPrevious(newHead);
       this.head = newHead;
     }
 
     this.llSize++;
   }
   peekFirst(): T {
-    return this.head.getData();
+    return this.head!.getData();
   }
   peekLast(): T {
-    return this.tail.getData();
+    return this.tail!.getData();
   }
   removeFirst(): T {
     let tmpHead = this.head;
-    tmpHead.getNext().setPrevious(null);
-    this.head = tmpHead.getNext();
+    tmpHead!.getNext()!.setPrevious(null);
+    this.head = tmpHead!.getNext();
     this.llSize--;
-    return tmpHead.getData();
+    return tmpHead!.getData();
   }
   removeLast(): T {
     let tmpTail = this.tail;
-    tmpTail.getPrevious().setNext(null);
-    this.tail = tmpTail.getPrevious();
+    tmpTail!.getPrevious()!.setNext(null);
+    this.tail = tmpTail!.getPrevious();
     this.llSize--;
-    return tmpTail.getData();
+    return tmpTail!.getData();
   }
   removeValue(): boolean {
     throw new Error("Method not implemented.");
@@ -128,6 +124,8 @@ class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
         tmpHead = tmpHead.getNext();
         counter++;
       }
+
+      return tmpHead!.getData();
     }
   }
   setAt(index: number, elem: T): void {
@@ -165,8 +163,8 @@ class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
         } else if (tmpHead === this.tail) {
           return this.removeLast();
         } else {
-          tmpHead.getNext().setPrevious(tmpHead.getPrevious());
-          tmpHead.getPrevious().setNext(tmpHead.getNext());
+          tmpHead!.getNext()!.setPrevious(tmpHead.getPrevious());
+          tmpHead!.getPrevious()!.setNext(tmpHead.getNext());
         }
 
         this.llSize--;
@@ -189,8 +187,8 @@ class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
         } else if (tmpHead === this.tail) {
           this.removeLast();
         } else {
-          tmpHead.getNext().setPrevious(tmpHead.getPrevious());
-          tmpHead.getPrevious().setNext(tmpHead.getNext());
+          tmpHead!.getNext()!.setPrevious(tmpHead.getPrevious());
+          tmpHead!.getPrevious()!.setNext(tmpHead.getNext());
         }
 
         this.llSize--;
