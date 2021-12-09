@@ -243,45 +243,45 @@ export class DoubleLinkedList<T> implements DoubleLinkedListI<T> {
   }
 }
 
-const newDoubleLinkedList = new DoubleLinkedList<string>();
+// const newDoubleLinkedList = new DoubleLinkedList<string>();
 
-console.log(newDoubleLinkedList.size());
+// console.log(newDoubleLinkedList.size());
 
-newDoubleLinkedList.addLast("a");
+// newDoubleLinkedList.addLast("a");
 
-console.log(newDoubleLinkedList.size());
-console.log(newDoubleLinkedList.peekFirst());
+// console.log(newDoubleLinkedList.size());
+// console.log(newDoubleLinkedList.peekFirst());
 
-newDoubleLinkedList.addFirst("b");
-console.log(newDoubleLinkedList.size());
-console.log(newDoubleLinkedList.peekFirst());
-console.log(newDoubleLinkedList.peekLast());
+// newDoubleLinkedList.addFirst("b");
+// console.log(newDoubleLinkedList.size());
+// console.log(newDoubleLinkedList.peekFirst());
+// console.log(newDoubleLinkedList.peekLast());
 
-newDoubleLinkedList.printAll();
+// newDoubleLinkedList.printAll();
 
-console.log(newDoubleLinkedList.getAt(1));
-newDoubleLinkedList.setAt(1, "d");
+// console.log(newDoubleLinkedList.getAt(1));
+// newDoubleLinkedList.setAt(1, "d");
 
-newDoubleLinkedList.add("c");
-newDoubleLinkedList.printAll();
+// newDoubleLinkedList.add("c");
+// newDoubleLinkedList.printAll();
 
-console.log(newDoubleLinkedList.indexOf("c"));
-console.log(newDoubleLinkedList.contains("b"));
+// console.log(newDoubleLinkedList.indexOf("c"));
+// console.log(newDoubleLinkedList.contains("b"));
 
-console.log(newDoubleLinkedList.toString());
+// console.log(newDoubleLinkedList.toString());
 
-console.log(newDoubleLinkedList.removeFirst());
-console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
-console.log(newDoubleLinkedList.removeLast());
-console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
+// console.log(newDoubleLinkedList.removeFirst());
+// console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
+// console.log(newDoubleLinkedList.removeLast());
+// console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
 
-newDoubleLinkedList.add("q");
-newDoubleLinkedList.add("w");
-newDoubleLinkedList.add("e");
-console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
+// newDoubleLinkedList.add("q");
+// newDoubleLinkedList.add("w");
+// newDoubleLinkedList.add("e");
+// console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
 
-newDoubleLinkedList.remove("w");
-console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
+// newDoubleLinkedList.remove("w");
+// console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
 
-newDoubleLinkedList.removeAt(1);
-console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());
+// newDoubleLinkedList.removeAt(1);
+// console.log(newDoubleLinkedList.toString(), newDoubleLinkedList.size());

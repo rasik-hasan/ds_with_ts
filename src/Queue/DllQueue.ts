@@ -2,22 +2,28 @@ import { DoubleLinkedList } from "../DoubleLinkedList/DoubleLinkedList";
 import { QueueI } from "./QueueInterface";
 
 export class DllQueue<T> implements QueueI<T> {
+  private doubleLinkedList: DoubleLinkedList<T>;
+
+  constructor() {
+    this.doubleLinkedList = new DoubleLinkedList();
+  }
+
   enqueue(item: T): void {
-    throw new Error("Method not implemented.");
+    this.doubleLinkedList.addLast(item);
   }
   dequeue(): T {
-    throw new Error("Method not implemented.");
+    return this.doubleLinkedList.removeFirst();
   }
   peek(): T {
-    throw new Error("Method not implemented.");
+    return this.doubleLinkedList.peekFirst();
   }
   search(item: T): number {
-    throw new Error("Method not implemented.");
+    return this.doubleLinkedList.indexOf(item);
   }
   size(): number {
-    throw new Error("Method not implemented.");
+    return this.doubleLinkedList.size();
   }
   isEmpty(): boolean {
-    throw new Error("Method not implemented.");
+    return this.doubleLinkedList.isEmpty();
   }
 }
