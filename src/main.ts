@@ -1,6 +1,6 @@
-import { SllStack } from "./Stack/StackInterface";
+import { SllStack } from "./Stack/SllStack";
+import { testStack } from "./Stack/StackImpl";
 
 console.log("working");
 
-//stack with single linked list related tests
-const newStack = new SllStack();
+testStack();
