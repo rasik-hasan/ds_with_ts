@@ -5,3 +5,6 @@
 
 - Queue with array
 - Queue with single linked list
+
+- Binary heap construction in O(n)
+- 
