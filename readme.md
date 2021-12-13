@@ -7,4 +7,6 @@
 - Queue with single linked list
 
 - Binary heap construction in O(n)
-- 
+- Fibonacci heap 
+- Binomial heap
+- Pairing heap
