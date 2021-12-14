@@ -13,5 +13,5 @@ export interface PQHeapI<T> {
   less(item1: T, item2: T): boolean; //compares if item1 <= item 2
   swim(k: number): void; // Perform bottom up node swim, O(log(n))
   sink(k: number): void; // Top down node sink, O(log(n))
-  swap(item1: T, item2: T): void; // swaps item1 and item2
+  swap(item1: number, item2: number): void; // swaps item1 and item2
 }
