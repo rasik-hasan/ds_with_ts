@@ -23,7 +23,15 @@ export class PQBH<T> implements PQHeapI<T> {
     return this.heap[0];
   }
   pop(): T {
-    throw new Error("Method not implemented.");
+    const removeItem = this.heap[0];
+
+    this.heap[0] = this.heap[this.heapSize - 1];
+    this.heap.pop(); //remove the last item of the array.
+    this.heapSize--;
+
+    this.sink(0);
+
+    return removeItem;
   }
   contains(item: T): boolean {
     this.heap.forEach((heapItem) => {
@@ -68,7 +76,22 @@ export class PQBH<T> implements PQHeapI<T> {
     }
   }
   sink(k: number): void {
-    throw new Error("Method not implemented.");
+    let leftChild = 2 * k + 1;
+    let rightChild = 2 * k + 2;
+
+    let currentIndex = k;
+
+    while (currentIndex <= this.heapSize - 1) {
+      let smallerChild =
+        this.heap[leftChild] <= this.heap[rightChild] ? leftChild : rightChild;
+
+      if (this.less(this.heap[smallerChild], this.heap[currentIndex])) {
+        this.swap(smallerChild, currentIndex);
+        currentIndex = smallerChild;
+      } else {
+        break;
+      }
+    }
   }
   swap(index1: number, index2: number): void {
     let tmpValue = this.heap[index1];
