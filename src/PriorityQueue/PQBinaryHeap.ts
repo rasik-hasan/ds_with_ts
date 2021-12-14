@@ -54,7 +54,7 @@ export class PQBH<T> implements PQHeapI<T> {
     return false;
   }
   swim(k: number): void {
-    let currentNodeIndex = k; //4
+    let currentNodeIndex = k;
     let parentNodeIndex = Math.floor((k - 1) / 2);
 
     while (parentNodeIndex >= 0) {

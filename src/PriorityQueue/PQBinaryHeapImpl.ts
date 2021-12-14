@@ -14,5 +14,7 @@ export const testPQBH = () => {
   newPQ.add(10);
   newPQ.add(0);
 
+  console.log(newPQ.peek());
+
   console.log(newPQ.toString());
 };
