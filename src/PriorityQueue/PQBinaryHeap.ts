@@ -69,4 +69,7 @@ export class PQBH<T> implements PQHeapI<T> {
     this.heap[index1] = this.heap[index2];
     this.heap[index2] = tmpValue;
   }
+  toString(): string {
+    return this.heap.join(",");
+  }
 }
