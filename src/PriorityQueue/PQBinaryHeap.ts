@@ -5,7 +5,10 @@ export class PQBH<T> implements PQHeapI<T> {
   private heap: T[] = [];
 
   isEmpty(): boolean {
-    throw new Error("Method not implemented.");
+    if (this.heapSize === 0) {
+      return true;
+    }
+    return false;
   }
   clear(): void {
     throw new Error("Method not implemented.");
@@ -14,6 +17,9 @@ export class PQBH<T> implements PQHeapI<T> {
     return this.heapSize;
   }
   peek(): T {
+    if (this.heapSize === 0) {
+      throw new Error("Heap is empty");
+    }
     return this.heap[0];
   }
   pop(): T {
@@ -49,13 +55,13 @@ export class PQBH<T> implements PQHeapI<T> {
   }
   swim(k: number): void {
     let currentNodeIndex = k; //4
-    let parentNodeIndex = (k - 1) / 2;
+    let parentNodeIndex = Math.floor((k - 1) / 2);
 
     while (parentNodeIndex >= 0) {
       if (this.less(this.heap[currentNodeIndex], this.heap[parentNodeIndex])) {
         this.swap(currentNodeIndex, parentNodeIndex);
         currentNodeIndex = parentNodeIndex;
-        parentNodeIndex = (currentNodeIndex - 1) / 2;
+        parentNodeIndex = Math.floor((currentNodeIndex - 1) / 2);
       } else {
         break;
       }
