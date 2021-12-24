@@ -47,7 +47,16 @@ export class PQBH<T> implements PQHeapI<T> {
     this.swim(this.heapSize - 1);
   }
   remove(item: T): boolean {
-    throw new Error("Method not implemented.");
+    let removeIndex = this.heap.findIndex((elem) => elem === item);
+
+    if (removeIndex === -1) {
+      return false;
+    }
+
+    this.swap(removeIndex, this.heapSize - 1);
+    this.heapSize--;
+    this.sink(removeIndex);
+    return true;
   }
   removeAt(index: number): boolean {
     throw new Error("Method not implemented.");
