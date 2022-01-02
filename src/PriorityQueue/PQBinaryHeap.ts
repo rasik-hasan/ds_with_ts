@@ -85,20 +85,27 @@ export class PQBH<T> implements PQHeapI<T> {
     }
   }
   sink(k: number): void {
-    let leftChild = 2 * k + 1;
-    let rightChild = 2 * k + 2;
-
     let currentIndex = k;
+    let leftChild = 2 * currentIndex + 1;
+    let rightChild = 2 * currentIndex + 2;
 
-    while (currentIndex <= this.heapSize - 1) {
-      let smallerChild =
-        this.heap[leftChild] <= this.heap[rightChild] ? leftChild : rightChild;
+    while (leftChild <= this.heapSize - 1) {
+      let smallerChildIndex = leftChild;
 
-      if (this.less(this.heap[smallerChild], this.heap[currentIndex])) {
-        this.swap(smallerChild, currentIndex);
-        currentIndex = smallerChild;
+      if (this.heap[rightChild])
+        smallerChildIndex =
+          this.heap[leftChild] <= this.heap[rightChild]
+            ? leftChild
+            : rightChild;
+      //console.log(smallerChildIndex);
+
+      if (this.less(this.heap[smallerChildIndex], this.heap[currentIndex])) {
+        this.swap(smallerChildIndex, currentIndex);
+        currentIndex = smallerChildIndex;
+        leftChild = 2 * currentIndex + 1;
+        rightChild = 2 * currentIndex + 2;
       } else {
-        break;
+        return;
       }
     }
   }
