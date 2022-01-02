@@ -55,11 +55,20 @@ export class PQBH<T> implements PQHeapI<T> {
 
     this.swap(removeIndex, this.heapSize - 1);
     this.heapSize--;
+    this.heap.pop(); // remove last element
     this.sink(removeIndex);
     return true;
   }
   removeAt(index: number): boolean {
-    throw new Error("Method not implemented.");
+    if (index > this.heapSize - 1) {
+      return false;
+    }
+
+    this.swap(index, this.heapSize - 1);
+    this.heapSize--;
+    this.heap.pop();
+    this.sink(index);
+    return true;
   }
   isMinHeap(k: number): boolean {
     throw new Error("Method not implemented.");

@@ -11,17 +11,22 @@ export const testPQBH = () => {
   newPQ.add(8);
   newPQ.add(1);
   newPQ.add(2);
-  //newPQ.add(5);
-  //newPQ.add(6);
+  newPQ.add(5);
+  newPQ.add(6);
   //console.log(newPQ.size());
 
   // console.log(newPQ.peek());
 
   // console.log(newPQ.toString());
 
-  //console.log(newPQ.pop());
+  console.log(newPQ.pop());
 
   // console.log(newPQ.toString(), newPQ.size());
 
+  console.log(newPQ.toString(), newPQ.size());
+
+  console.log(newPQ.remove(6));
+  console.log(newPQ.remove(3));
+  console.log(newPQ.removeAt(1));
   console.log(newPQ.toString(), newPQ.size());
 };
