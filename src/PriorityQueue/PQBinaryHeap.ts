@@ -47,6 +47,7 @@ export class PQBH<T> implements PQHeapI<T> {
     this.swim(this.heapSize - 1);
   }
   remove(item: T): boolean {
+    // need to make this O(1)
     let removeIndex = this.heap.findIndex((elem) => elem === item);
 
     if (removeIndex === -1) {
