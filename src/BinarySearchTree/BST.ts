@@ -18,19 +18,40 @@ class BSTNode<T> implements BSTNodeI<T> {
 
 export class BST<T> implements BSTI<T> {
   private nodeCount = 0;
-  private root: BSTNodeI<T> | null = null;
+  root: BSTNodeI<T> | null = null;
 
   isEmpty(): boolean {
-    throw new Error("Method not implemented.");
+    if (this.nodeCount === 0) {
+      return true;
+    } else return false;
   }
   size(): number {
-    throw new Error("Method not implemented.");
+    return this.nodeCount;
   }
-  add(item: T): boolean;
-  add(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
-  add(node: any, item?: any): boolean | BSTNodeI<T> {
-    throw new Error("Method not implemented.");
+  add(item: T): boolean {
+    if (!this.root) {
+      this.root = new BSTNode(item, null, null);
+    } else {
+      this.addItem(this.root, item);
+    }
+
+    this.nodeCount++;
+    return true;
   }
+
+  addItem(node: BSTNodeI<T> | null, item: T): BSTNodeI<T> | null {
+    if (!node) {
+      return new BSTNode(item, null, null);
+    }
+    if (item < node.data) {
+      node.leftChild = this.addItem(node.leftChild, item);
+      return node;
+    } else {
+      node.rightChild = this.addItem(node.rightChild, item);
+      return node;
+    }
+  }
+
   remove(item: T): boolean;
   remove(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
   remove(node: any, item?: any): boolean | BSTNodeI<T> {
@@ -46,8 +67,13 @@ export class BST<T> implements BSTI<T> {
   contains(node: any, item?: any): boolean {
     throw new Error("Method not implemented.");
   }
-  printPreOrderTraversal(): void {
-    throw new Error("Method not implemented.");
+  printPreOrderTraversal(node: BSTNodeI<T> | null): void {
+    if (!node) {
+      return;
+    }
+    console.log(node.data);
+    this.printPreOrderTraversal(node.leftChild);
+    this.printPreOrderTraversal(node.rightChild);
   }
   printPostOrderTraversal(): void {
     throw new Error("Method not implemented.");
