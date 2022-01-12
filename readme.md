@@ -10,3 +10,6 @@
 - Fibonacci heap 
 - Binomial heap
 - Pairing heap
+
+- Priority queue
+- make remove function O(1) using hash table

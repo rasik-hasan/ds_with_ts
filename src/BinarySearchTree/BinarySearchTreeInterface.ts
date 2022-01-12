@@ -1,14 +1,14 @@
-export interface BSTNode<T> {
+export interface BSTNodeI<T> {
   data: T;
-  leftChild: BSTNode<T> | null;
-  rightChild: BSTNode<T> | null;
+  leftChild: BSTNodeI<T> | null;
+  rightChild: BSTNodeI<T> | null;
 }
 
 export interface BSTI<T> {
   isEmpty(): boolean;
   size(): number;
   add(item: T): boolean;
-  add(node: BSTNode<T>, item: T): BSTNode<T>;
+  add(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
   remove(item: T): boolean;
   height(): number;
   contains(item: T): boolean;
@@ -19,9 +19,9 @@ export interface BSTI<T> {
 
   //private methods
 
-  findMin(node: BSTNode<T>): BSTNode<T>; //find smallest leftmost node
-  findMax(node: BSTNode<T>): BSTNode<T>; //find largest rightmost node
-  contains(node: BSTNode<T>, item: T): boolean;
-  remove(node: BSTNode<T>, item: T): BSTNode<T>;
-  height(node: BSTNode<T>): number;
+  findMin(node: BSTNodeI<T>): BSTNodeI<T>; //find smallest leftmost node
+  findMax(node: BSTNodeI<T>): BSTNodeI<T>; //find largest rightmost node
+  contains(node: BSTNodeI<T>, item: T): boolean;
+  remove(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
+  height(node: BSTNodeI<T>): number;
 }
