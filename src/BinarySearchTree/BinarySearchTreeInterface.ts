@@ -4,7 +4,7 @@ export interface BSTNode<T> {
   rightChild: BSTNode<T> | null;
 }
 
-export interface BSTTree<T> {
+export interface BSTI<T> {
   isEmpty(): boolean;
   size(): number;
   add(item: T): boolean;
