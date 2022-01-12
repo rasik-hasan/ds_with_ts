@@ -8,11 +8,11 @@ export interface BSTI<T> {
   isEmpty(): boolean;
   size(): number;
   add(item: T): boolean;
-  add(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
+  addItem(node: BSTNodeI<T>, item: T): BSTNodeI<T> | null;
   remove(item: T): boolean;
   height(): number;
   contains(item: T): boolean;
-  printPreOrderTraversal(): void;
+  printPreOrderTraversal(head: BSTNodeI<T> | null): void;
   printPostOrderTraversal(): void;
   printInorderTraversal(): void;
   printLevelOrderTraversal(): void;
