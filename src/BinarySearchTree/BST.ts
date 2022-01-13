@@ -32,7 +32,8 @@ export class BST<T> implements BSTI<T> {
     if (!this.root) {
       this.root = new BSTNode(item, null, null);
     } else {
-      this.addItem(this.root, item);
+      const returnVal = this.addItem(this.root, item);
+      console.log("return valu:", returnVal);
     }
 
     this.nodeCount++;
@@ -45,11 +46,10 @@ export class BST<T> implements BSTI<T> {
     }
     if (item < node.data) {
       node.leftChild = this.addItem(node.leftChild, item);
-      return node;
     } else {
       node.rightChild = this.addItem(node.rightChild, item);
-      return node;
     }
+    return node;
   }
 
   remove(item: T): boolean;
