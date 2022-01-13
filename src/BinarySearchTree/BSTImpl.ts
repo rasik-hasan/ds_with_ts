@@ -9,6 +9,7 @@ export const testBST = () => {
   BSTDS.add(9);
   BSTDS.add(4);
   BSTDS.add(10);
+  BSTDS.add(8);
 
   console.log("bst size: ", BSTDS.size());
   BSTDS.printPreOrderTraversal(BSTDS.root);
