@@ -68,22 +68,20 @@ export class BST<T> implements BSTI<T> {
   //wrong output
   contains(item: T): boolean {
     const result = this.containsItem(this.root, item);
-    console.log(result);
+
     return result;
   }
   containsItem(node: BSTNodeI<T> | null, item: T): boolean {
+    console.log(node?.data, item);
     if (!node) {
       return false;
-    }
-    if (item < node.data) {
-      this.containsItem(node.leftChild, item);
+    } else if (item < node.data) {
+      return this.containsItem(node.leftChild, item);
     } else if (item > node.data) {
-      this.containsItem(node.rightChild, item);
+      return this.containsItem(node.rightChild, item);
     } else {
       return true;
     }
-
-    return false;
   }
   removeItem(node: BSTNodeI<T>, item: T): BSTNodeI<T> {
     throw new Error("Method not implemented.");
