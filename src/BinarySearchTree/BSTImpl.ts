@@ -13,4 +13,7 @@ export const testBST = () => {
 
   console.log("bst size: ", BSTDS.size());
   BSTDS.printPreOrderTraversal(BSTDS.root);
+  console.log(BSTDS.isEmpty());
+
+  //console.log(BSTDS.contains(1));
 };
