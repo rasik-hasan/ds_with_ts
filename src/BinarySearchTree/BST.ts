@@ -58,6 +58,7 @@ export class BST<T> implements BSTI<T> {
     return node;
   }
 
+  //TO DO
   remove(item: T): boolean {
     throw new Error("Method not implemented.");
   }
@@ -65,7 +66,7 @@ export class BST<T> implements BSTI<T> {
     throw new Error("Method not implemented.");
   }
 
-  //wrong output
+  //tested and correct
   contains(item: T): boolean {
     const result = this.containsItem(this.root, item);
 
