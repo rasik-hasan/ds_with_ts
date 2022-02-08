@@ -12,8 +12,12 @@ export const testBST = () => {
   BSTDS.add(8);
 
   // console.log("bst size: ", BSTDS.size());
-  // BSTDS.printPreOrderTraversal(BSTDS.root);
+  BSTDS.printPreOrderTraversal(BSTDS.root);
   //console.log(BSTDS.isEmpty());
 
-  console.log(BSTDS.contains(11));
+  // console.log(BSTDS.contains(10));
+
+  console.log(BSTDS.remove(4));
+
+  BSTDS.printPreOrderTraversal(BSTDS.root);
 };

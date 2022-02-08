@@ -60,8 +60,19 @@ export class BST<T> implements BSTI<T> {
 
   //TO DO
   remove(item: T): boolean {
-    throw new Error("Method not implemented.");
+    if (this.contains(item)) {
+      this.removeItem(this.root, item);
+      this.nodeCount--;
+      return true;
+    } else {
+      return false;
+    }
   }
+
+  removeItem(node: BSTNodeI<T> | null, item: T): any {
+    //console.log(node);
+  }
+
   height(): number {
     throw new Error("Method not implemented.");
   }
@@ -73,7 +84,7 @@ export class BST<T> implements BSTI<T> {
     return result;
   }
   containsItem(node: BSTNodeI<T> | null, item: T): boolean {
-    console.log(node?.data, item);
+    //console.log(node?.data, item);
     if (!node) {
       return false;
     } else if (item < node.data) {
@@ -84,9 +95,7 @@ export class BST<T> implements BSTI<T> {
       return true;
     }
   }
-  removeItem(node: BSTNodeI<T>, item: T): BSTNodeI<T> {
-    throw new Error("Method not implemented.");
-  }
+
   heightRecur(node: BSTNodeI<T>): number {
     throw new Error("Method not implemented.");
   }

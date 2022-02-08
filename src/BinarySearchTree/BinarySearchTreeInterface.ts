@@ -21,6 +21,6 @@ export interface BSTI<T> {
   findMin(node: BSTNodeI<T>): BSTNodeI<T>; //find smallest leftmost node
   findMax(node: BSTNodeI<T>): BSTNodeI<T>; //find largest rightmost node
   containsItem(node: BSTNodeI<T>, item: T): boolean;
-  removeItem(node: BSTNodeI<T>, item: T): BSTNodeI<T>;
+  removeItem(node: BSTNodeI<T>, item: T): any;
   heightRecur(node: BSTNodeI<T>): number;
 }
