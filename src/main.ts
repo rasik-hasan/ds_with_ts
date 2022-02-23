@@ -2,6 +2,7 @@ import { testBST } from "./BinarySearchTree/BSTImpl";
 import { testPQBH } from "./PriorityQueue/PQBinaryHeapImpl";
 import { testPalindromRecursion } from "./ProblemSolving/palindromeRecur";
 import { testStringReversal } from "./ProblemSolving/stringReversal";
+import { testSumOfNatural } from "./ProblemSolving/sumOfNaturalNumbers";
 import { testQueue } from "./Queue/QueueImpl";
 import { testStack } from "./Stack/StackImpl";
 
@@ -13,4 +14,6 @@ import { testStack } from "./Stack/StackImpl";
 
 //testStringReversal();
 
-testPalindromRecursion();
+//testPalindromRecursion();
+
+testSumOfNatural();
