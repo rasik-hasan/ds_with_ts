@@ -1,3 +1,4 @@
+import { testDecimalToBinary } from "./ProblemSolving/decimalToBinary";
 import { testBST } from "./BinarySearchTree/BSTImpl";
 import { testPQBH } from "./PriorityQueue/PQBinaryHeapImpl";
 import { testPalindromRecursion } from "./ProblemSolving/palindromeRecur";
@@ -16,4 +17,6 @@ import { testStack } from "./Stack/StackImpl";
 
 //testPalindromRecursion();
 
-testSumOfNatural();
+//testSumOfNatural();
+
+testDecimalToBinary();
