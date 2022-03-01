@@ -6,6 +6,7 @@ import { testStringReversal } from "./ProblemSolving/stringReversal";
 import { testSumOfNatural } from "./ProblemSolving/sumOfNaturalNumbers";
 import { testQueue } from "./Queue/QueueImpl";
 import { testStack } from "./Stack/StackImpl";
+import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
 
 //testQueue();
 
@@ -19,4 +20,6 @@ import { testStack } from "./Stack/StackImpl";
 
 //testSumOfNatural();
 
-testDecimalToBinary();
+//testDecimalToBinary();
+
+testBinarySearchRecur();
