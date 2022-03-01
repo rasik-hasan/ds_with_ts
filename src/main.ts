@@ -7,6 +7,7 @@ import { testSumOfNatural } from "./ProblemSolving/sumOfNaturalNumbers";
 import { testQueue } from "./Queue/QueueImpl";
 import { testStack } from "./Stack/StackImpl";
 import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
+import { testBinarySearchLoop } from "./ProblemSolving/LC-704_binarySearchLoop";
 
 //testQueue();
 
@@ -22,4 +23,6 @@ import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
 
 //testDecimalToBinary();
 
-testBinarySearchRecur();
+//testBinarySearchRecur();
+
+testBinarySearchLoop();

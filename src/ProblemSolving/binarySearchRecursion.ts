@@ -1,8 +1,8 @@
 export const testBinarySearchRecur = () => {
   console.log("bina");
 
-  const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-  const searchNumber = 11;
+  const inputArray = [-1, 0, 3, 5, 9, 12];
+  const searchNumber = 2;
 
   const binarySearchRecur = (
     input: number[],
@@ -22,7 +22,7 @@ export const testBinarySearchRecur = () => {
     } else if (searchNumber > input[mid]) {
       return binarySearchRecur(input, searchNumber, mid + 1, right);
     } else {
-      return binarySearchRecur(input, searchNumber, left, mid);
+      return binarySearchRecur(input, searchNumber, left, mid - 1);
     }
   };
 
