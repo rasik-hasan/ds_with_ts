@@ -8,6 +8,7 @@ import { testQueue } from "./Queue/QueueImpl";
 import { testStack } from "./Stack/StackImpl";
 import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
 import { testBinarySearchLoop } from "./ProblemSolving/LC-704_binarySearchLoop";
+import { testFibonacci } from "./ProblemSolving/LC-509_fibonacci";
 
 //testQueue();
 
@@ -25,4 +26,6 @@ import { testBinarySearchLoop } from "./ProblemSolving/LC-704_binarySearchLoop";
 
 //testBinarySearchRecur();
 
-testBinarySearchLoop();
+//testBinarySearchLoop();
+
+testFibonacci();
