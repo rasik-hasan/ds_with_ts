@@ -70,7 +70,33 @@ export class BST<T> implements BSTI<T> {
   }
 
   removeItem(node: BSTNodeI<T> | null, item: T): any {
-    //console.log(node);
+    if (!node) {
+      return node;
+    } else if (item < node.data) {
+      node.leftChild = this.removeItem(node.leftChild, item);
+      return node;
+    } else if (item > node.data) {
+      node.rightChild = this.removeItem(node.rightChild, item);
+      return node;
+    } else if (
+      item === node.data &&
+      node.leftChild === null &&
+      node.rightChild === null
+    ) {
+      return null;
+    } else if (item === node.data && (node.leftChild || node.rightChild)) {
+      if (node.leftChild) {
+        return node.leftChild;
+      } else {
+        return node.rightChild;
+      }
+    } else if (item === node.data && node.leftChild && node.rightChild) {
+      //wrong
+      node = this.removeItem(node.leftChild, item);
+      return node;
+    }
+
+    return node;
   }
 
   height(): number {

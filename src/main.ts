@@ -14,7 +14,7 @@ import { testFibonacci } from "./ProblemSolving/LC-509_fibonacci";
 
 //testPQBH();
 
-//testBST(); // unfinished
+testBST(); // unfinished
 
 //testStringReversal();
 
