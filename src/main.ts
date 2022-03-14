@@ -28,4 +28,4 @@ import { testFibonacci } from "./ProblemSolving/LC-509_fibonacci";
 
 //testBinarySearchLoop();
 
-testFibonacci();
+//testFibonacci();
