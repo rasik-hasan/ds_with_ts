@@ -9,12 +9,13 @@ import { testStack } from "./Stack/StackImpl";
 import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
 import { testBinarySearchLoop } from "./ProblemSolving/LC-704_binarySearchLoop";
 import { testFibonacci } from "./ProblemSolving/LC-509_fibonacci";
+import { testSolution } from "./ProblemSolving/LC-104_max_depth_OfBinaryTree";
 
 //testQueue();
 
 //testPQBH();
 
-testBST(); // unfinished
+//testBST(); // unfinished
 
 //testStringReversal();
 
@@ -29,3 +30,5 @@ testBST(); // unfinished
 //testBinarySearchLoop();
 
 //testFibonacci();
+
+testSolution();
