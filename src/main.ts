@@ -10,6 +10,7 @@ import { testBinarySearchRecur } from "./ProblemSolving/binarySearchRecursion";
 import { testBinarySearchLoop } from "./ProblemSolving/LC-704_binarySearchLoop";
 import { testFibonacci } from "./ProblemSolving/LC-509_fibonacci";
 import { testSolution } from "./ProblemSolving/LC-104_max_depth_OfBinaryTree";
+import { testInvBinTree } from "./ProblemSolving/LC-226_invert_bin_tree";
 
 //testQueue();
 
@@ -31,4 +32,6 @@ import { testSolution } from "./ProblemSolving/LC-104_max_depth_OfBinaryTree";
 
 //testFibonacci();
 
-testSolution();
+//testSolution();
+
+testInvBinTree();
