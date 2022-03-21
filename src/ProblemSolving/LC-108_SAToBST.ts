@@ -28,32 +28,31 @@ export const SA2BST = () => {
 
   function sortedArrayToBST(nums: number[]): TreeNode | null {
     const mid = Math.floor(nums.length / 2);
-    let left = mid - 1;
-    let root = new TreeNode(nums[mid], null, null);
+    console.log(nums, mid);
 
-    const addNodeLeft = (root: TreeNode, left: number) => {
-      if (left < 0 || left === mid) {
-        return;
+    if (mid === 0) {
+      if (nums[mid] !== undefined) {
+        console.log(nums[mid]);
+        return new TreeNode(nums[mid], null, null);
+      } else {
+        return null;
       }
-      const newNode = new TreeNode(nums[left], null, null);
-      root.left = newNode;
-      left--;
-      addNodeLeft(root.left, left);
-    };
-
-    addNodeLeft(root, left);
-    if (root.val !== nums[nums.length - 1]) {
-      root.right = new TreeNode(nums[nums.length - 1], null, null);
-      left = nums.length - 2;
-      addNodeLeft(root.right, left);
     }
 
-    return root;
+    const newNode = new TreeNode(nums[mid], null, null);
+
+    newNode.left = sortedArrayToBST(nums.slice(0, mid));
+    newNode.right = sortedArrayToBST(nums.slice(mid + 1, nums.length));
+
+    return newNode;
   }
 
-  const testArr1 = [1, 3];
-  const testArr2 = [0, 1, 2, 3, 4, 5];
+  const testArr1 = [1, 2, 3];
+  const testArr2 = [1, 2, 3, 4, 5];
+  const testArr3 = [-10, -3, 0, 5, 9];
+  const testArr4 = [1, 3];
+  const testArr5 = [0];
 
-  const rootNode = sortedArrayToBST(testArr2);
+  const rootNode = sortedArrayToBST(testArr5);
   console.log(rootNode);
 };

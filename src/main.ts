@@ -38,3 +38,9 @@ import { SA2BST } from "./ProblemSolving/LC-108_SAToBST";
 //testInvBinTree();
 
 SA2BST();
+
+// const arr = [1, 2, 3, 4, 5];
+// const mid = Math.floor(arr.length / 2);
+// console.log(mid);
+// console.log(arr.slice(0, mid));
+// console.log(arr.slice(mid + 1, arr.length));
