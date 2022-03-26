@@ -65,19 +65,19 @@ export const testDOBT = () => {
     const dobt = (root: TreeNode | null): number => {
       //console.log(root);
       if (root === null) {
-        return 0.5;
+        return 0;
       }
       const leftHeight = dobt(root.left);
       const rightHeight = dobt(root.right);
       const sum = Math.floor(leftHeight + rightHeight);
       valueArr.push(sum);
 
-      return Math.floor(1 + Math.max(leftHeight, rightHeight));
+      return 1 + Math.max(leftHeight, rightHeight);
     };
 
     dobt(root);
     return Math.max(...valueArr);
   }
 
-  console.log(diameterOfBinaryTree(root3));
+  console.log(diameterOfBinaryTree(root1));
 };
