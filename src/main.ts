@@ -13,6 +13,7 @@ import { testSolution } from "./ProblemSolving/LC-104_max_depth_OfBinaryTree";
 import { testInvBinTree } from "./ProblemSolving/LC-226_invert_bin_tree";
 import { SA2BST } from "./ProblemSolving/LC-108_SAToBST";
 import { testPlusOne } from "./ProblemSolving/LC-66_plus_one";
+import { testDOBT } from "./ProblemSolving/LC-543-diameter_BT";
 
 //testQueue();
 
@@ -40,4 +41,6 @@ import { testPlusOne } from "./ProblemSolving/LC-66_plus_one";
 
 //SA2BST();
 
-testPlusOne();
+//testPlusOne();
+
+testDOBT();
