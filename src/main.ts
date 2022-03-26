@@ -1,3 +1,4 @@
+import { testPathSum } from "./ProblemSolving/LC-112-pathSum";
 import { testDecimalToBinary } from "./ProblemSolving/decimalToBinary";
 import { testBST } from "./BinarySearchTree/BSTImpl";
 import { testPQBH } from "./PriorityQueue/PQBinaryHeapImpl";
@@ -43,4 +44,6 @@ import { testDOBT } from "./ProblemSolving/LC-543-diameter_BT";
 
 //testPlusOne();
 
-testDOBT();
+//testDOBT();
+
+testPathSum();
