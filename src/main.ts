@@ -1,3 +1,4 @@
+import { testHouseRobber } from "./ProblemSolving/LC_198_house_robber";
 import { testPathSum } from "./ProblemSolving/LC-112-pathSum";
 import { testDecimalToBinary } from "./ProblemSolving/decimalToBinary";
 import { testBST } from "./BinarySearchTree/BSTImpl";
@@ -49,4 +50,6 @@ import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
 
 //testPathSum();
 
-testMax();
+//testMax();
+
+testHouseRobber();
