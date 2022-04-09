@@ -17,6 +17,7 @@ import { SA2BST } from "./ProblemSolving/LC-108_SAToBST";
 import { testPlusOne } from "./ProblemSolving/LC-66_plus_one";
 import { testDOBT } from "./ProblemSolving/LC-543-diameter_BT";
 import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
+import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testQueue();
 
@@ -53,3 +54,5 @@ import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
 //testMax();
 
 //testHouseRobber();
+
+testAssignCookies();
