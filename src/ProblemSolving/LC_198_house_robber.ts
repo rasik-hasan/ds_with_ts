@@ -10,8 +10,8 @@ export const testHouseRobber = () => {
   ];
   //console.log(test1.slice(2, test1.length));
 
-  function rob(nums: number[], memo = {}): number {
-    console.log(nums);
+  function rob(nums: number[], memo: { [key: string]: number } = {}): number {
+    //console.log(nums);
     if (nums.length === 0) {
       return 0;
     }
@@ -21,15 +21,20 @@ export const testHouseRobber = () => {
 
     let max = 0;
 
+    if (nums.toString() in memo) {
+      return memo[nums.toString()];
+    }
+
     nums.forEach((value, index) => {
-      const v = rob(nums.slice(index + 2, nums.length)) + value;
+      const v = rob(nums.slice(index + 2, nums.length), memo) + value;
       if (v > max) {
         max = v;
       }
     });
 
+    memo[nums.toString()] = max;
     return max;
   }
 
-  console.log(rob(test1));
+  console.log(rob(test3));
 };
