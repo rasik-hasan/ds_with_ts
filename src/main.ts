@@ -1,3 +1,4 @@
+import { testMerge } from "./ProblemSolving/LC-88_merge_sorted_arr";
 import { testHouseRobber } from "./ProblemSolving/LC_198_house_robber";
 import { testPathSum } from "./ProblemSolving/LC-112-pathSum";
 import { testDecimalToBinary } from "./ProblemSolving/decimalToBinary";
@@ -55,4 +56,17 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testHouseRobber();
 
-testAssignCookies();
+//testAssignCookies();
+
+testMerge();
+
+let i = 0;
+
+// while (i < 10) {
+//   if (i === 5) {
+//     //i++;
+//     continue;
+//   }
+//   i++;
+//   console.log(i);
+// }
