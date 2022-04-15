@@ -1,3 +1,4 @@
+import { testNumberOfIslands } from "./ProblemSolving/LC-200_number_of_islands";
 import { testSameTree } from "./ProblemSolving/LC-100_Same_Tree";
 import { testMerge } from "./ProblemSolving/LC-88_merge_sorted_arr";
 import { testHouseRobber } from "./ProblemSolving/LC_198_house_robber";
@@ -61,4 +62,6 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testMerge();
 
-testSameTree();
+//testSameTree();
+
+testNumberOfIslands();
