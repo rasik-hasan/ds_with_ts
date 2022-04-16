@@ -46,16 +46,11 @@ export const testNumberOfIslands = () => {
   ];
 
   function numIslands(grid: string[][]): number {
-    interface tuples {
-      i: number;
-      j: number;
-    }
+    const rootValues = new Map<string, string>();
 
-    const rootValues = new Map<string, tuples>();
-
-    const reconcile = (oldValue: tuples, newValue: tuples) => {
+    const reconcile = (oldValue: string, newValue: string) => {
       rootValues.forEach((value, key) => {
-        if (value.i === oldValue.i && value.j === oldValue.j) {
+        if (value === oldValue) {
           rootValues.set(key, newValue);
         }
       });
@@ -75,12 +70,12 @@ export const testNumberOfIslands = () => {
 
           //both left and up present
           if (left && up) {
-            if (left.i === up.i && left.j === up.j) {
-              rootValues.set(current, { i: up.i, j: up.j });
+            if (left === up) {
+              rootValues.set(current, up);
             } else {
               // for now choose one and reconcile another
-              rootValues.set(current, up);
-              reconcile(left, up);
+              rootValues.set(current, left);
+              reconcile(up, left);
             }
           } else if (left || up) {
             //if either left or up is present
@@ -91,7 +86,7 @@ export const testNumberOfIslands = () => {
             }
           } else {
             //if neither is present
-            rootValues.set(current, { i, j });
+            rootValues.set(current, current);
           }
         }
       }
@@ -99,15 +94,7 @@ export const testNumberOfIslands = () => {
 
     const values = Array.from(rootValues.values());
 
-    const valuesStrings = values.map((item) => {
-      return JSON.stringify(item);
-    });
-
-    function onlyUnique(value: any, index: any, self: any) {
-      return self.indexOf(value) === index;
-    }
-
-    const unique = valuesStrings.filter(onlyUnique).length;
+    const unique = [...new Set(values)].length;
 
     return unique;
   }
