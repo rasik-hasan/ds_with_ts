@@ -29,7 +29,7 @@ export const testNumberOfIslands = () => {
     ["1", "0", "0"],
   ];
 
-  const grid5 = [["1", "1", "1"]];
+  const grid5 = [["1", "0", "1"]];
 
   const grid6 = [
     ["1", "0", "1", "1", "1"],
@@ -51,7 +51,7 @@ export const testNumberOfIslands = () => {
       j: number;
     }
 
-    const rootValues = new Map<tuples, tuples>();
+    const rootValues = new Map<string, tuples>();
 
     const reconcile = (oldValue: tuples, newValue: tuples) => {
       rootValues.forEach((value, key) => {
@@ -64,14 +64,14 @@ export const testNumberOfIslands = () => {
     for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[i].length; j++) {
         if (grid[i][j] === "1") {
-          const up = rootValues.has({ i: i - 1, j })
-            ? rootValues.get({ i: i - 1, j })
+          const up = rootValues.has(JSON.stringify({ i: i - 1, j }))
+            ? rootValues.get(JSON.stringify({ i: i - 1, j }))
             : null;
-          const left = rootValues.has({ i, j: j - 1 })
-            ? rootValues.get({ i, j: j - 1 })
+          const left = rootValues.has(JSON.stringify({ i, j: j - 1 }))
+            ? rootValues.get(JSON.stringify({ i, j: j - 1 }))
             : null;
 
-          const current: tuples = { i, j };
+          const current = JSON.stringify({ i, j });
 
           //both left and up present
           if (left && up) {
@@ -91,25 +91,28 @@ export const testNumberOfIslands = () => {
             }
           } else {
             //if neither is present
-            rootValues.set(current, current);
+            rootValues.set(current, { i, j });
           }
         }
       }
     }
 
-    console.log(rootValues);
-
     const values = Array.from(rootValues.values());
+
+    const valuesStrings = values.map((item) => {
+      return JSON.stringify(item);
+    });
 
     function onlyUnique(value: any, index: any, self: any) {
       return self.indexOf(value) === index;
     }
-    const unique = values.filter(onlyUnique).length;
+
+    const unique = valuesStrings.filter(onlyUnique).length;
 
     return unique;
   }
 
   //console.log(grid1);
-  console.log(numIslands(grid6));
+  console.log(numIslands(grid7));
   //console.log(grid1);
 };
