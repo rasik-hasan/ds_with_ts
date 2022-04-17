@@ -26,7 +26,7 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testPQBH();
 
-//testBST(); // unfinished
+testBST(); // unfinished
 
 //testStringReversal();
 
@@ -64,4 +64,4 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testSameTree();
 
-testNumberOfIslands();
+//testNumberOfIslands();

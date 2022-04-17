@@ -70,33 +70,48 @@ export class BST<T> implements BSTI<T> {
   }
 
   removeItem(node: BSTNodeI<T> | null, item: T): any {
-    if (!node) {
-      return node;
+    if (node === null) {
+      return null;
     } else if (item < node.data) {
       node.leftChild = this.removeItem(node.leftChild, item);
       return node;
     } else if (item > node.data) {
       node.rightChild = this.removeItem(node.rightChild, item);
       return node;
-    } else if (
-      item === node.data &&
-      node.leftChild === null &&
-      node.rightChild === null
-    ) {
-      return null;
-    } else if (item === node.data && (node.leftChild || node.rightChild)) {
-      if (node.leftChild) {
-        return node.leftChild;
-      } else {
-        return node.rightChild;
+    } else {
+      //if node has only right st or no st
+      if (node.leftChild === null) {
+        const rightChild = node.rightChild;
+        node = null;
+        return rightChild;
       }
-    } else if (item === node.data && node.leftChild && node.rightChild) {
-      //wrong
-      node = this.removeItem(node.leftChild, item);
+      //if node has only left st or no st
+      else if (node.rightChild === null) {
+        const leftChild = node.leftChild;
+        node = null;
+        return leftChild;
+      } else {
+        //node contains both left and right st
+        //replace current node with the highest value in left subtree
+        //or the lowest value in right subtree
+        //doing highest value in left subtree
+        //first find the highest value in right subtree
+        const highestLeft = this.findHighest(node.leftChild);
+
+        node.data = highestLeft.data;
+
+        node.leftChild = this.removeItem(node.leftChild, highestLeft.data);
+
+        return node;
+      }
+    }
+  }
+
+  findHighest(node: BSTNodeI<T>): BSTNodeI<T> {
+    if (node.rightChild === null) {
       return node;
     }
-
-    return node;
+    return this.findHighest(node.rightChild);
   }
 
   height(): number {
