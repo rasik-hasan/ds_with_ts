@@ -96,7 +96,7 @@ export class BST<T> implements BSTI<T> {
         //or the lowest value in right subtree
         //doing highest value in left subtree
         //first find the highest value in right subtree
-        const highestLeft = this.findHighest(node.leftChild);
+        const highestLeft = this.findRightHighest(node.leftChild);
 
         node.data = highestLeft.data;
 
@@ -107,11 +107,11 @@ export class BST<T> implements BSTI<T> {
     }
   }
 
-  findHighest(node: BSTNodeI<T>): BSTNodeI<T> {
+  findRightHighest(node: BSTNodeI<T>): BSTNodeI<T> {
     if (node.rightChild === null) {
       return node;
     }
-    return this.findHighest(node.rightChild);
+    return this.findRightHighest(node.rightChild);
   }
 
   height(): number {
