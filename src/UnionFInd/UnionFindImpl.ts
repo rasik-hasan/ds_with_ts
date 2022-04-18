@@ -8,18 +8,13 @@ export const testUnionFind = () => {
   newUnionFind.printDetails();
 
   newUnionFind.unify(0, 9);
-  newUnionFind.unify(9, 5);
-  newUnionFind.unify(2, 4);
-  newUnionFind.unify(6, 8);
-  newUnionFind.unify(7, 8);
-  newUnionFind.unify(0, 8);
-  console.log(newUnionFind.find(7));
-  newUnionFind.unify(7, 4);
-  newUnionFind.unify(1, 3);
-  newUnionFind.unify(1, 0);
-  newUnionFind.unify(0, 3);
-  console.log(newUnionFind.find(3));
-  console.log(newUnionFind.getGroupSize(0));
-
-  newUnionFind.printDetails();
+  newUnionFind.unify(8, 9);
+  newUnionFind.unify(3, 4);
+  newUnionFind.unify(4, 9);
+  newUnionFind.unify(6, 7);
+  newUnionFind.unify(4, 6);
+  newUnionFind.unify(1, 2);
+  newUnionFind.unify(2, 6);
+  newUnionFind.unify(6, 5);
+  newUnionFind.unify(2, 7);
 };

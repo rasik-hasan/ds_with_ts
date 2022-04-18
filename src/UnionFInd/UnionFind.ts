@@ -33,22 +33,20 @@ export class UnionFind {
 
   //find the root of the element
   public find(p: number): number {
-    let temp = p;
+    let root = p;
 
-    while (this.id[p] != p) {
-      p = this.id[p];
+    while (this.id[root] !== root) {
+      root = this.id[root];
     }
 
-    //now p has the root
-
-    //pointing all the items to the root for optimization
-    while (this.id[temp] != temp) {
-      const parent = this.id[temp];
-      this.id[temp] = p;
-      temp = parent;
+    //path compression
+    while (p !== root) {
+      const parent = this.id[p];
+      this.id[p] = root;
+      p = parent;
     }
 
-    return p;
+    return root;
   }
 
   //return if p,q are in the same group
