@@ -58,7 +58,7 @@ export class BST<T> implements BSTI<T> {
     return node;
   }
 
-  //TO DO
+  //done
   remove(item: T): boolean {
     if (this.contains(item)) {
       this.removeItem(this.root, item);

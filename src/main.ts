@@ -26,7 +26,7 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 
 //testPQBH();
 
-testBST(); // unfinished
+//testBST(); // finished
 
 //testStringReversal();
 
