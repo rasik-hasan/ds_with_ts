@@ -1,3 +1,4 @@
+import { testBFS } from "./ProblemSolving/bfsGraphMatrix";
 import { testNumberOfIslands } from "./ProblemSolving/LC-200_number_of_islands";
 import { testSameTree } from "./ProblemSolving/LC-100_Same_Tree";
 import { testMerge } from "./ProblemSolving/LC-88_merge_sorted_arr";
@@ -67,4 +68,6 @@ import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 
 //testNumberOfIslands();
 
-testUnionFind();
+//testUnionFind();
+
+testBFS();
