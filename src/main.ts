@@ -21,6 +21,7 @@ import { testPlusOne } from "./ProblemSolving/LC-66_plus_one";
 import { testDOBT } from "./ProblemSolving/LC-543-diameter_BT";
 import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
 import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
+import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 
 //testQueue();
 
@@ -65,3 +66,5 @@ import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 //testSameTree();
 
 //testNumberOfIslands();
+
+testUnionFind();

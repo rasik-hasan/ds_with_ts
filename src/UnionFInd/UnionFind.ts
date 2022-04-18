@@ -1,4 +1,4 @@
-class UnionFind {
+export class UnionFind {
   //number of elements in this union find
   private size: number;
 
@@ -57,13 +57,42 @@ class UnionFind {
   }
 
   //return number of elements in this unionFind
-  private getSize(): number {
+  public getSize(): number {
     return this.size;
   }
 
-  private getNumberOfGroups(): number {
+  public getNumberOfGroups(): number {
     return this.numOfGroups;
   }
 
-  public unify(p: number, q: number) {}
+  public getGroupSize(p: number): number {
+    return this.eachGroupSize[this.find(p)];
+  }
+
+  public unify(p: number, q: number) {
+    if (this.connected(p, q)) {
+      return;
+    }
+
+    const rootP = this.find(p);
+    const rootQ = this.find(q);
+
+    if (this.getGroupSize(p) >= this.getGroupSize(q)) {
+      this.id[rootQ] = rootP;
+      this.eachGroupSize[rootP] += this.eachGroupSize[rootQ];
+      this.eachGroupSize[rootQ] = 0;
+    } else {
+      this.id[rootP] = rootQ;
+      this.eachGroupSize[rootQ] += this.eachGroupSize[rootP];
+      this.eachGroupSize[rootP] = 0;
+    }
+
+    this.numOfGroups--;
+
+    this.printDetails();
+  }
+
+  public printDetails() {
+    console.log(this.id, this.getNumberOfGroups());
+  }
 }
