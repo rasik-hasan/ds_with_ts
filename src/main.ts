@@ -71,3 +71,8 @@ import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 //testUnionFind();
 
 testBFS();
+
+// const arr = [1, 1, 1, 1, 0];
+// console.log(arr.indexOf(1, 0));
+
+// console.log(arr.includes(0));
