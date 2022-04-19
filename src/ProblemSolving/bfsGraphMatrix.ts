@@ -40,7 +40,7 @@ export const testBFS = () => {
         startIndex = neighbours.indexOf(1, startIndex);
         //console.log(startIndex);
         if (startIndex !== -1) {
-          if (!visited.includes(startIndex)) {
+          if (!visited.includes(startIndex) && !queue.includes(startIndex)) {
             queue.push(startIndex);
             distanceMap[startIndex] = distanceMap[current!] + 1;
           }
@@ -53,5 +53,5 @@ export const testBFS = () => {
     return distanceMap;
   };
 
-  console.log(BFS(input, 1));
+  console.log(BFS(input, 4));
 };
