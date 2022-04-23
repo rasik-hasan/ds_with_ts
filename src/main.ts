@@ -24,6 +24,7 @@ import { testDOBT } from "./ProblemSolving/LC-543-diameter_BT";
 import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
 import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 import { testUnionFind } from "./UnionFInd/UnionFindImpl";
+import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
 
 //testQueue();
 
@@ -74,3 +75,5 @@ import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 //testBFS();
 
 //longestConsequtiveSeq();
+
+removeDuplicates();
