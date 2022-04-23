@@ -8,16 +8,17 @@ export const removeDuplicates = () => {
   const input5: any = [];
 
   function removeDuplicates(nums: number[]): number {
-    let k = nums.length;
-    let i = 1;
+    let k = 1;
+    let slowPointer = 0;
+    let fastPointer = 1;
 
-    while (i < k) {
-      if (nums[i] === nums[i - 1]) {
-        nums.splice(i, 1);
-        k--;
-      } else {
-        i++;
+    while (fastPointer < nums.length) {
+      if (nums[slowPointer] !== nums[fastPointer]) {
+        nums[slowPointer + 1] = nums[fastPointer];
+        slowPointer++;
+        k++;
       }
+      fastPointer++;
     }
 
     console.log(nums);
