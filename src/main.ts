@@ -1,3 +1,4 @@
+import { longestConsequtiveSeq } from "./ProblemSolving/LC-128_longest_consecutive_seq";
 import { testBFS } from "./ProblemSolving/bfsGraphMatrix";
 import { testNumberOfIslands } from "./ProblemSolving/LC-200_number_of_islands";
 import { testSameTree } from "./ProblemSolving/LC-100_Same_Tree";
@@ -70,9 +71,6 @@ import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 
 //testUnionFind();
 
-testBFS();
+//testBFS();
 
-// const arr = [1, 1, 1, 1, 0];
-// console.log(arr.indexOf(1, 0));
-
-// console.log(arr.includes(0));
+//longestConsequtiveSeq();
