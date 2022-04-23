@@ -1,3 +1,4 @@
+import { testRemoveElements } from "./ProblemSolving/LC-27-removeElement";
 import { longestConsequtiveSeq } from "./ProblemSolving/LC-128_longest_consecutive_seq";
 import { testBFS } from "./ProblemSolving/bfsGraphMatrix";
 import { testNumberOfIslands } from "./ProblemSolving/LC-200_number_of_islands";
@@ -76,4 +77,6 @@ import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
 
 //longestConsequtiveSeq();
 
-removeDuplicates();
+//removeDuplicates();
+
+testRemoveElements();
