@@ -26,6 +26,7 @@ import { testMax } from "./ProblemSolving/LC-1646_max_in_generated_arr";
 import { testAssignCookies } from "./ProblemSolving/LC-455_assign_cookies";
 import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
+import { testDesignUnderground } from "./ProblemSolving/LC-1396_Design_Underground";
 
 //testQueue();
 
@@ -79,4 +80,6 @@ import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
 
 //removeDuplicates();
 
-testRemoveElements();
+//testRemoveElements();
+
+testDesignUnderground();
