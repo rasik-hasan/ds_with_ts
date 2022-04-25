@@ -30,6 +30,7 @@ import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
 import { testDesignUnderground } from "./ProblemSolving/LC-1396_Design_Underground";
 import { testMaxIceCream } from "./ProblemSolving/LC-1833_maximum_iceCream";
 import { testPeekingIterator } from "./ProblemSolving/LC_283-peeking_iterator";
+import { testIntersectionOfArray } from "./ProblemSolving/LC-349_intersection_of_array";
 
 //testQueue();
 
@@ -91,4 +92,6 @@ import { testPeekingIterator } from "./ProblemSolving/LC_283-peeking_iterator";
 
 //testPeekingIterator();
 
-testRomanToInt();
+//testRomanToInt();
+
+testIntersectionOfArray();
