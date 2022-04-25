@@ -1,3 +1,4 @@
+import { testRomanToInt } from "./ProblemSolving/LC-13_roman_to_int";
 import { testRemoveElements } from "./ProblemSolving/LC-27-removeElement";
 import { longestConsequtiveSeq } from "./ProblemSolving/LC-128_longest_consecutive_seq";
 import { testBFS } from "./ProblemSolving/bfsGraphMatrix";
@@ -28,6 +29,7 @@ import { testUnionFind } from "./UnionFInd/UnionFindImpl";
 import { removeDuplicates } from "./ProblemSolving/LC-26_remove_duplicates";
 import { testDesignUnderground } from "./ProblemSolving/LC-1396_Design_Underground";
 import { testMaxIceCream } from "./ProblemSolving/LC-1833_maximum_iceCream";
+import { testPeekingIterator } from "./ProblemSolving/LC_283-peeking_iterator";
 
 //testQueue();
 
@@ -85,4 +87,8 @@ import { testMaxIceCream } from "./ProblemSolving/LC-1833_maximum_iceCream";
 
 //testDesignUnderground();
 
-testMaxIceCream();
+//testMaxIceCream();
+
+//testPeekingIterator();
+
+testRomanToInt();
