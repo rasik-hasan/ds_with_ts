@@ -6,23 +6,17 @@ export const testIntersectionOfArray = () => {
     nums2_b = [9, 4, 9, 8, 4];
 
   function intersection(nums1: number[], nums2: number[]): number[] {
-    const nums1Map = new Map();
-    const resultArray = new Map();
+    const result = [];
+    const uniqNums1 = [...new Set(nums1)];
 
-    for (let i = 0; i < nums1.length; i++) {
-      nums1Map.set(nums1[i], 1);
-    }
-
-    for (let i = 0; i < nums2.length; i++) {
-      if (nums1Map.has(nums2[i])) {
-        resultArray.set(nums2[i], 1);
+    for (let i = 0; i < uniqNums1.length; i++) {
+      if (nums2.includes(uniqNums1[i])) {
+        result.push(uniqNums1[i]);
       }
     }
 
-    let keys = Array.from(resultArray.keys());
-
-    return keys;
+    return result;
   }
 
-  console.log(intersection(nums2_a, nums2_b));
+  console.log(intersection(nums1_a, nums1_b));
 };
