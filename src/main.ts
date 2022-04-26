@@ -31,6 +31,7 @@ import { testDesignUnderground } from "./ProblemSolving/LC-1396_Design_Undergrou
 import { testMaxIceCream } from "./ProblemSolving/LC-1833_maximum_iceCream";
 import { testPeekingIterator } from "./ProblemSolving/LC_283-peeking_iterator";
 import { testIntersectionOfArray } from "./ProblemSolving/LC-349_intersection_of_array";
+import { testHeaters } from "./ProblemSolving/LC-475_heaters";
 
 //testQueue();
 
@@ -94,4 +95,6 @@ import { testIntersectionOfArray } from "./ProblemSolving/LC-349_intersection_of
 
 //testRomanToInt();
 
-testIntersectionOfArray();
+// testIntersectionOfArray();
+
+testHeaters();
