@@ -11,23 +11,27 @@ export const testHeaters = () => {
     heaters3 = [2];
 
   function findRadius(houses: number[], heaters: number[]): number {
-    const distances: { [key: string]: number[] } = {};
+    const distances: number[] = [];
 
     for (let i = 0; i < houses.length; i++) {
-      distances[houses[i]] = [];
+      let min = null;
       for (let j = 0; j < heaters.length; j++) {
-        distances[houses[i]].push(Math.abs(houses[i] - heaters[j]));
+        const distance = Math.abs(houses[i] - heaters[j]);
+
+        if (min === null) {
+          min = distance;
+        } else {
+          min = Math.min(min, distance);
+        }
+      }
+
+      if (min !== null) {
+        distances.push(min);
       }
     }
 
-    const distancesMin = [];
-
-    for (let i = 0; i < houses.length; i++) {
-      distancesMin.push(Math.min(...distances[houses[i]]));
-    }
-
-    return Math.max(...distancesMin);
+    return Math.max(...distances);
   }
 
-  console.log(findRadius(house3, heaters3));
+  console.log(findRadius(house1, heaters1));
 };
