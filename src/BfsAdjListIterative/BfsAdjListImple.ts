@@ -1,3 +1,4 @@
+import { BFSAdjListItr } from "./BfsAdjListIterative";
 import { addUnweightedUndirectedEdge, createEmptyGraph } from "./Graph";
 
 export const testBfsAdjList = () => {
@@ -20,4 +21,8 @@ export const testBfsAdjList = () => {
   addUnweightedUndirectedEdge(graph, 10, 9);
   addUnweightedUndirectedEdge(graph, 9, 8);
   console.log(graph);
+
+  const bfsClass = new BFSAdjListItr(graph);
+
+  console.log(bfsClass.bfs_calculate_distance(0));
 };

@@ -8,6 +8,34 @@ export class Edge {
     this.to = $to;
     this.cost = $cost;
   }
+
+  public get $from(): number {
+    return this.from;
+  }
+
+  public get $to(): number {
+    return this.to;
+  }
+
+  public get $cost(): number {
+    return this.cost;
+  }
+
+  public set $from(value: number) {
+    this.from = value;
+  }
+
+  public set $to(value: number) {
+    this.to = value;
+  }
+
+  /**
+   * Setter $cost
+   * @param {number} value
+   */
+  public set $cost(value: number) {
+    this.cost = value;
+  }
 }
 
 export const createEmptyGraph = (n: number): Edge[][] => {
