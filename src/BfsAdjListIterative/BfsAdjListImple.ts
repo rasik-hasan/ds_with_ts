@@ -1,7 +1,4 @@
-import {
-  addUnweightedUndirectedEdge,
-  createEmptyGraph,
-} from "./BfsAdjListIterative";
+import { addUnweightedUndirectedEdge, createEmptyGraph } from "./Graph";
 
 export const testBfsAdjList = () => {
   console.log("test bfs");

@@ -1,47 +1,19 @@
-export class Edge {
-  private from: number;
-  private to: number;
-  private cost: number;
+import { Edge } from "./Graph";
 
-  constructor($from: number, $to: number, $cost: number) {
-    this.from = $from;
-    this.to = $to;
-    this.cost = $cost;
+export class BFSAdjListItr {
+  private graphSize: number;
+  private prev: number[];
+  private graph: Edge[][];
+
+  constructor($graph: Edge[][]) {
+    this.graphSize = $graph.length;
+    this.prev = [];
+    this.graph = $graph;
   }
+
+  reconstructPath(start: number, end: number): number[] {
+    return [];
+  }
+
+  bfs(start: number) {}
 }
-
-export const createEmptyGraph = (n: number): Edge[][] => {
-  const graph: Edge[][] = new Array(n);
-
-  for (let i = 0; i < n; i++) {
-    graph[i] = [];
-  }
-  return graph;
-};
-
-export const addDirectedEdge = (
-  graph: Edge[][],
-  from: number,
-  to: number,
-  cost: number
-) => {
-  graph[from].push(new Edge(from, to, cost));
-};
-
-export const addUndirectedEdge = (
-  graph: Edge[][],
-  from: number,
-  to: number,
-  cost: number
-) => {
-  addDirectedEdge(graph, from, to, cost);
-  addDirectedEdge(graph, to, from, cost);
-};
-
-export const addUnweightedUndirectedEdge = (
-  graph: Edge[][],
-  from: number,
-  to: number
-) => {
-  addUndirectedEdge(graph, from, to, 1);
-};
