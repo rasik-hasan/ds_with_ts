@@ -24,5 +24,6 @@ export const testBfsAdjList = () => {
 
   const bfsClass = new BFSAdjListItr(graph);
 
-  console.log(bfsClass.bfs_calculate_distance(0));
+  console.log(bfsClass.bfs_with_prev(0));
+  bfsClass.bfs_fcc(0);
 };

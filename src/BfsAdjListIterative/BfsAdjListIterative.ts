@@ -52,4 +52,71 @@ export class BFSAdjListItr {
 
     return distanceMap;
   }
+
+  bfs_with_prev(start: number): {} {
+    this.prev = new Array(this.graphSize);
+
+    const queue = [];
+    const visited: number[] = [];
+    const distanceMap: any = {};
+
+    for (let i = 0; i < this.graphSize; i++) {
+      distanceMap[i] = "infinity";
+    }
+
+    distanceMap[start] = 0;
+    queue.push(start);
+
+    while (queue.length !== 0) {
+      const current = queue.shift();
+      visited.push(current!);
+
+      //console.log("current", current, visited, queue);
+
+      const neighbours = this.graph[current!];
+
+      for (let i = 0; i < neighbours.length; i++) {
+        const currentNeighbour: Edge = neighbours[i];
+
+        if (
+          !visited.includes(currentNeighbour.$to) &&
+          !queue.includes(currentNeighbour.$to)
+        ) {
+          queue.push(currentNeighbour.$to);
+          this.prev[currentNeighbour.$to] = current!;
+          distanceMap[currentNeighbour.$to] =
+            distanceMap[current!] + currentNeighbour.$cost;
+        }
+      }
+    }
+
+    console.log(this.prev, visited);
+
+    return distanceMap;
+  }
+
+  bfs_fcc(start: number) {
+    this.prev = new Array(this.graphSize);
+    const visited: boolean[] = new Array<boolean>(this.graphSize);
+    visited.fill(false);
+    const queue = [];
+
+    queue.push(start);
+    visited[start] = true;
+
+    while (queue.length !== 0) {
+      const node: number = queue.shift()!;
+      const edges: Edge[] = this.graph[node];
+
+      for (let i = 0; i < edges.length; i++) {
+        if (!visited[edges[i].$to]) {
+          visited[edges[i].$to] = true;
+          this.prev[edges[i].$to] = node;
+          queue.push(edges[i].$to);
+        }
+      }
+    }
+
+    console.log(this.prev);
+  }
 }
