@@ -29,10 +29,6 @@ export class Edge {
     this.to = value;
   }
 
-  /**
-   * Setter $cost
-   * @param {number} value
-   */
   public set $cost(value: number) {
     this.cost = value;
   }
