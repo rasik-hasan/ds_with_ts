@@ -20,10 +20,10 @@ export const testBfsAdjList = () => {
   addUnweightedUndirectedEdge(graph, 1, 10);
   addUnweightedUndirectedEdge(graph, 10, 9);
   addUnweightedUndirectedEdge(graph, 9, 8);
-  console.log(graph);
+  //console.log(graph);
 
   const bfsClass = new BFSAdjListItr(graph);
 
   console.log(bfsClass.bfs_with_prev(0));
-  bfsClass.bfs_fcc(0);
+  //bfsClass.bfs_fcc(0);
 };

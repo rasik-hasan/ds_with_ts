@@ -66,22 +66,17 @@ export class BFSAdjListItr {
 
     distanceMap[start] = 0;
     queue.push(start);
+    visited.push(start);
 
     while (queue.length !== 0) {
       const current = queue.shift();
-      visited.push(current!);
-
-      //console.log("current", current, visited, queue);
-
       const neighbours = this.graph[current!];
 
       for (let i = 0; i < neighbours.length; i++) {
         const currentNeighbour: Edge = neighbours[i];
 
-        if (
-          !visited.includes(currentNeighbour.$to) &&
-          !queue.includes(currentNeighbour.$to)
-        ) {
+        if (!visited.includes(currentNeighbour.$to)) {
+          visited.push(currentNeighbour.$to);
           queue.push(currentNeighbour.$to);
           this.prev[currentNeighbour.$to] = current!;
           distanceMap[currentNeighbour.$to] =
