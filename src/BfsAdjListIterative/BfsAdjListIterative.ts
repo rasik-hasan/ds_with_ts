@@ -12,7 +12,24 @@ export class BFSAdjListItr {
   }
 
   reconstructPath(start: number, end: number): number[] {
-    return [];
+    let path: number[] = [];
+    this.bfs_with_prev(start);
+    //now I have the updated prev array.
+
+    console.log(this.prev);
+
+    for (let i = end; i !== undefined; i = this.prev[i]) {
+      path.push(i);
+    }
+
+    path.reverse();
+
+    if (path[0] === start) {
+      return path;
+    }
+    path = [];
+
+    return path;
   }
 
   bfs_calculate_distance(start: number): {} {

@@ -26,4 +26,6 @@ export const testBfsAdjList = () => {
 
   console.log(bfsClass.bfs_with_prev(0));
   //bfsClass.bfs_fcc(0);
+
+  console.log(bfsClass.reconstructPath(0, 4));
 };
