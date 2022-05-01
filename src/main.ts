@@ -35,6 +35,7 @@ import { testHeaters } from "./ProblemSolving/LC-475_heaters";
 import { testBfsAdjList } from "./BfsAdjListIterative/BfsAdjListImple";
 import { testDFS } from "./DFSAdjListIterative/DFSImpl";
 import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
+import { testLoggerRateLimiter } from "./ProblemSolving/LC-359_logger_rate_limiter";
 
 //testQueue();
 
@@ -106,4 +107,6 @@ import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
 
 //testDFS();
 
-testMaxDepth();
+//testMaxDepth();
+
+testLoggerRateLimiter();
