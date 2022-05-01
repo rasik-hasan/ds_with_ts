@@ -36,6 +36,7 @@ import { testBfsAdjList } from "./BfsAdjListIterative/BfsAdjListImple";
 import { testDFS } from "./DFSAdjListIterative/DFSImpl";
 import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
 import { testLoggerRateLimiter } from "./ProblemSolving/LC-359_logger_rate_limiter";
+import { testStringCompare } from "./ProblemSolving/LC-844_backspace_string_compare";
 
 //testQueue();
 
@@ -109,4 +110,6 @@ import { testLoggerRateLimiter } from "./ProblemSolving/LC-359_logger_rate_limit
 
 //testMaxDepth();
 
-testLoggerRateLimiter();
+//testLoggerRateLimiter();
+
+testStringCompare();
