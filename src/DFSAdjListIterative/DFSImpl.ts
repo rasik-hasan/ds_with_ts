@@ -2,6 +2,7 @@ import {
   addDirectedEdge,
   createEmptyGraph,
 } from "./../BfsAdjListIterative/Graph";
+import { DFSAdjListIterative } from "./DFSAdjListIterative";
 export const testDFS = () => {
   console.log("test dfs");
 
@@ -28,4 +29,8 @@ export const testDFS = () => {
   addDirectedEdge(graph, 2, 2, 10); // Self loop
 
   console.log(graph);
+
+  const dfsClass = new DFSAdjListIterative();
+
+  console.log(dfsClass.dfs(graph, 0));
 };
