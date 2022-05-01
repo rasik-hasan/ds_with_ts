@@ -34,6 +34,7 @@ import { testIntersectionOfArray } from "./ProblemSolving/LC-349_intersection_of
 import { testHeaters } from "./ProblemSolving/LC-475_heaters";
 import { testBfsAdjList } from "./BfsAdjListIterative/BfsAdjListImple";
 import { testDFS } from "./DFSAdjListIterative/DFSImpl";
+import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
 
 //testQueue();
 
@@ -103,4 +104,6 @@ import { testDFS } from "./DFSAdjListIterative/DFSImpl";
 
 //testBfsAdjList();
 
-testDFS();
+//testDFS();
+
+testMaxDepth();
