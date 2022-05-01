@@ -37,6 +37,7 @@ import { testDFS } from "./DFSAdjListIterative/DFSImpl";
 import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
 import { testLoggerRateLimiter } from "./ProblemSolving/LC-359_logger_rate_limiter";
 import { testStringCompare } from "./ProblemSolving/LC-844_backspace_string_compare";
+import { testValidParenthesis } from "./ProblemSolving/LC-20_valid_parenthesis";
 
 //testQueue();
 
@@ -112,4 +113,6 @@ import { testStringCompare } from "./ProblemSolving/LC-844_backspace_string_comp
 
 //testLoggerRateLimiter();
 
-testStringCompare();
+//testStringCompare();
+
+testValidParenthesis();
