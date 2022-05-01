@@ -38,6 +38,7 @@ import { testMaxDepth } from "./ProblemSolving/LC-559_max_depth_n_ary";
 import { testLoggerRateLimiter } from "./ProblemSolving/LC-359_logger_rate_limiter";
 import { testStringCompare } from "./ProblemSolving/LC-844_backspace_string_compare";
 import { testValidParenthesis } from "./ProblemSolving/LC-20_valid_parenthesis";
+import { testEmailProcess } from "./ProblemSolving/LC-939_email_process";
 
 //testQueue();
 
@@ -115,4 +116,6 @@ import { testValidParenthesis } from "./ProblemSolving/LC-20_valid_parenthesis";
 
 //testStringCompare();
 
-testValidParenthesis();
+//testValidParenthesis();
+
+testEmailProcess();
