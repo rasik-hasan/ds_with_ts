@@ -41,6 +41,7 @@ import { testValidParenthesis } from "./ProblemSolving/LC-20_valid_parenthesis";
 import { testEmailProcess } from "./ProblemSolving/LC-939_email_process";
 import { testAddStrings } from "./ProblemSolving/LC-434_add_strings";
 import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
+import { testTopSort } from "./TopSort/TopSortImpl";
 
 //testQueue();
 
@@ -124,4 +125,6 @@ import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
 
 //testAddStrings();
 
-testSortParity();
+//testSortParity();
+
+testTopSort();
