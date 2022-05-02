@@ -40,6 +40,7 @@ import { testStringCompare } from "./ProblemSolving/LC-844_backspace_string_comp
 import { testValidParenthesis } from "./ProblemSolving/LC-20_valid_parenthesis";
 import { testEmailProcess } from "./ProblemSolving/LC-939_email_process";
 import { testAddStrings } from "./ProblemSolving/LC-434_add_strings";
+import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
 
 //testQueue();
 
@@ -121,4 +122,6 @@ import { testAddStrings } from "./ProblemSolving/LC-434_add_strings";
 
 //testEmailProcess();
 
-testAddStrings();
+//testAddStrings();
+
+testSortParity();
