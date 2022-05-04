@@ -1,3 +1,4 @@
+import { TopSort } from "./TopSort";
 import {
   addDirectedEdge,
   addUndirectedEdge,
@@ -7,7 +8,9 @@ import {
 export const testTopSort = () => {
   console.log("top sort");
 
-  const graph = createEmptyGraph(7);
+  const numNodes = 7;
+
+  const graph = createEmptyGraph(numNodes);
   addDirectedEdge(graph, 0, 1, 3);
   addDirectedEdge(graph, 0, 2, 2);
   addDirectedEdge(graph, 0, 5, 3);
@@ -19,4 +22,7 @@ export const testTopSort = () => {
   addDirectedEdge(graph, 5, 4, 7);
 
   console.log(graph);
+  const topSort = new TopSort(graph);
+
+  console.log(topSort.topologicalSort(numNodes));
 };
