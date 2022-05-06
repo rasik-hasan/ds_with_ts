@@ -59,6 +59,35 @@ export class TopSort {
   // in the adjacency list since you can have singleton nodes with no edges which
   // wouldn't be present in the adjacency list but are still part of the graph!
   dagShortestPath(start: number, numNodes: number): number[] {
-    return [];
+    const topSortVal = this.topologicalSort(numNodes);
+    const dist: number[] = new Array(numNodes).fill(null);
+
+    dist[start] = 0;
+    //console.log(dist);
+
+    for (let i = 0; i < numNodes; i++) {
+      const nodeIndex = topSortVal[i];
+
+      if (dist[nodeIndex] !== null) {
+        const neighbours = this.graph[nodeIndex];
+
+        if (neighbours !== null) {
+          for (let j = 0; j < neighbours.length; j++) {
+            const newDist = dist[nodeIndex] + neighbours[j].$cost;
+
+            if (dist[neighbours[j].$to] === null) {
+              dist[neighbours[j].$to] = newDist;
+            } else {
+              dist[neighbours[j].$to] = Math.min(
+                dist[neighbours[j].$to],
+                newDist
+              );
+            }
+          }
+        }
+      }
+    }
+
+    return dist;
   }
 }
