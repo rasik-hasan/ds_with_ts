@@ -14,5 +14,6 @@ export const testDjikStra = () => {
   addDirectedEdge(graph, 3, 4, 3);
 
   const djik = new DjikStraAdjList(graph);
-  djik.djikstra(0, 4);
+  console.log(djik.djikstra(0, 1));
+  console.log(djik.reconstructPath(0, 1));
 };

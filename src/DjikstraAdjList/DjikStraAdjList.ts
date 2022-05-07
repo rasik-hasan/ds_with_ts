@@ -35,10 +35,12 @@ export interface Node {
 export class DjikStraAdjList {
   private dist: number[];
   private graph: Edge[][];
+  private sourceNode: number[];
 
   constructor(graph: Edge[][]) {
     this.graph = graph;
     this.dist = [];
+    this.sourceNode = [];
   }
 
   /**
@@ -48,7 +50,13 @@ export class DjikStraAdjList {
    *     'end' are not connected then an empty array is returned.
    */
   reconstructPath(start: number, end: number): number[] {
-    return [];
+    const path = [];
+    const dist = this.djikstra(start, end);
+
+    for (let at = end; at !== null; at = this.sourceNode[at]) {
+      path.push(at);
+    }
+    return path.reverse();
   }
 
   // Run Dijkstra's algorithm on a directed graph to find the shortest path
@@ -61,6 +69,7 @@ export class DjikStraAdjList {
     const pQueue = new Heap<Node>((a, b) => {
       return a.value - b.value;
     });
+    this.sourceNode = new Array(this.graph.length).fill(null);
 
     //console.log(this.graph);
 
@@ -79,11 +88,13 @@ export class DjikStraAdjList {
 
         if (this.dist[currentNeighbour.$to] === null) {
           this.dist[currentNeighbour.$to] = distance;
+          this.sourceNode[currentNeighbour.$to] = currentNeighbour.$from;
         } else {
           this.dist[currentNeighbour.$to] = Math.min(
             this.dist[currentNeighbour.$to],
             distance
           );
+          this.sourceNode[currentNeighbour.$to] = currentNeighbour.$from;
         }
 
         pQueue.push({
@@ -93,7 +104,7 @@ export class DjikStraAdjList {
       }
     }
 
-    console.log(this.dist);
+    //console.log(this.dist, this.sourceNode);
 
     return this.dist[end];
   }
