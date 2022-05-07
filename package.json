@@ -9,7 +9,9 @@
   "author": "Rasik Hasan <rasik@younode.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/heap": "^0.2.30",
     "@types/node": "^16.11.12",
+    "heap": "^0.2.7",
     "nodemon": "^2.0.15",
     "typescript": "^4.5.2"
   },

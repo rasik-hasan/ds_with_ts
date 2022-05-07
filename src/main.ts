@@ -42,6 +42,7 @@ import { testEmailProcess } from "./ProblemSolving/LC-939_email_process";
 import { testAddStrings } from "./ProblemSolving/LC-434_add_strings";
 import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
 import { testTopSort } from "./TopSort/TopSortImpl";
+import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
 
 //testQueue();
 
@@ -127,4 +128,6 @@ import { testTopSort } from "./TopSort/TopSortImpl";
 
 //testSortParity();
 
-testTopSort();
+//testTopSort();
+
+testDjikStra();
