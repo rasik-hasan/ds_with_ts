@@ -1,12 +1,12 @@
 {
   "name": "ds_with_ts",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main.ts",
   "scripts": {
-    "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/main.ts -e ts,graphql"
+    "watch": "nodemon --watch 'src/**/*.ts' "
   },
   "repository": "https://github.com/rasik-hasan/ds_with_ts.git",
-  "author": "Rasik Hasan <rasik@younode.com>",
+  "author": "Rasik Hasan <rasik.hasan14@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@types/heap": "^0.2.30",
