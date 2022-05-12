@@ -43,6 +43,7 @@ import { testAddStrings } from "./ProblemSolving/LC-434_add_strings";
 import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
 import { testTopSort } from "./TopSort/TopSortImpl";
 import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
+import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
 
 //testQueue();
 
@@ -130,4 +131,6 @@ import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
 
 //testTopSort();
 
-testDjikStra();
+//testDjikStra();
+
+testSquareDiagonal();
