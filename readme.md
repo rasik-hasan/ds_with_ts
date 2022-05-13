@@ -1,15 +1,5 @@
-# To do: 
+# Description
 
-- Stack with array
-- Stack with double linked list
+This repo is me studying data structures with typescript, hence the name ds with ts.
 
-- Queue with array
-- Queue with single linked list
-
-- Binary heap construction in O(n)
-- Fibonacci heap 
-- Binomial heap
-- Pairing heap
-
-- Priority queue
-- make remove function O(1) using hash table
+p.s: also contains problem solving. (work in progress)
