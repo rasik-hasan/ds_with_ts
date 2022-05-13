@@ -44,6 +44,7 @@ import { testSortParity } from "./ProblemSolving/LC_905-sortParity";
 import { testTopSort } from "./TopSort/TopSortImpl";
 import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
 import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
+import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 
 //testQueue();
 
@@ -133,4 +134,6 @@ import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
 
 //testDjikStra();
 
-testSquareDiagonal();
+//testSquareDiagonal();
+
+calculate_ratios();
