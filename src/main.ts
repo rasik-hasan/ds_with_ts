@@ -136,4 +136,4 @@ import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 
 //testSquareDiagonal();
 
-calculate_ratios();
+//calculate_ratios();
