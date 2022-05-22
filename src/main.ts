@@ -45,6 +45,7 @@ import { testTopSort } from "./TopSort/TopSortImpl";
 import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
 import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
 import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
+import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
 
 //testQueue();
 
@@ -137,3 +138,5 @@ import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 //testSquareDiagonal();
 
 //calculate_ratios();
+
+testSymmetricTree();
