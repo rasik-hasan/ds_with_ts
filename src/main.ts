@@ -46,6 +46,7 @@ import { testDjikStra } from "./DjikstraAdjList/DjikstraImple";
 import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
 import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
+import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
 
 //testQueue();
 
@@ -139,4 +140,6 @@ import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
 
 //calculate_ratios();
 
-testSymmetricTree();
+//testSymmetricTree();
+
+testFloodFill();
