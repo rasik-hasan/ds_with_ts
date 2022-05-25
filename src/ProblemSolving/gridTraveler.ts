@@ -10,7 +10,11 @@ export const testGridTraveler = () => {
   const m5 = 18,
     n5 = 18; // 2333606220
 
-  const gridTraveler = (m: number, n: number): number => {
+  const gridTraveler = (
+    m: number,
+    n: number,
+    memo: { [key: string]: number } = {}
+  ): number => {
     if (m === 0 || n === 0) {
       return 0;
     }
@@ -18,12 +22,17 @@ export const testGridTraveler = () => {
       return 1;
     }
 
-    const down = gridTraveler(m - 1, n);
-    const right = gridTraveler(m, n - 1);
-    const result = down + right;
+    if (memo[`${m},${n}`] !== undefined) {
+      return memo[`${m},${n}`];
+    } else {
+      const down = gridTraveler(m - 1, n, memo);
+      const right = gridTraveler(m, n - 1, memo);
+      const result = down + right;
+      memo[`${m},${n}`] = result;
 
-    return result;
+      return result;
+    }
   };
 
-  console.log(gridTraveler(m4, n4));
+  console.log(gridTraveler(m5, n5));
 };
