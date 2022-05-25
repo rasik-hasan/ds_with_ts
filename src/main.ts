@@ -48,6 +48,7 @@ import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
 import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
 import { testGridTraveler } from "./ProblemSolving/gridTraveler";
+import { testCanSum } from "./ProblemSolving/canSum";
 
 //testQueue();
 
@@ -147,4 +148,6 @@ import { testGridTraveler } from "./ProblemSolving/gridTraveler";
 
 //testOnesAndZeroes();
 
-testGridTraveler();
+//testGridTraveler();
+
+testCanSum();
