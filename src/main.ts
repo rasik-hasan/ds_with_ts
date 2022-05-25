@@ -47,6 +47,7 @@ import { testSquareDiagonal } from "./ProblemSolving/HR_square_diagonal";
 import { calculate_ratios } from "./ProblemSolving/HR_calculate_ratios";
 import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
 import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
+import { testOnesAndZeroes } from "./ProblemSolving/LC_474-ones-and_zeroes";
 
 //testQueue();
 
@@ -66,7 +67,7 @@ import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
 
 //testBinarySearchLoop();
 
-//testFibonacci();
+testFibonacci();
 
 //testSolution();
 
@@ -142,4 +143,6 @@ import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
 
 //testSymmetricTree();
 
-testFloodFill();
+//testFloodFill();
+
+//testOnesAndZeroes();
