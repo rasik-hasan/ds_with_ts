@@ -16,7 +16,12 @@ export const testCanSum = () => {
   const targetSum5 = 300,
     arr5 = [7, 14]; // false
 
-  const canSum = (targetSum: number, numbers: number[]): boolean => {
+  const canSum = (
+    targetSum: number,
+    numbers: number[],
+    memo: { [key: string]: boolean } = {}
+  ): boolean => {
+    if (memo[targetSum] !== undefined) return memo[targetSum];
     if (targetSum === 0) {
       return true;
     }
@@ -29,15 +34,17 @@ export const testCanSum = () => {
     const results = [];
 
     for (let i = 0; i < arrayLength; i++) {
-      results.push(canSum(targetSum - numbers[i], numbers));
+      results.push(canSum(targetSum - numbers[i], numbers, memo));
     }
 
     if (results.indexOf(true) !== -1) {
+      memo[targetSum] = true;
       return true;
     } else {
+      memo[targetSum] = false;
       return false;
     }
   };
 
-  console.log(canSum(targetSum4, arr4));
+  console.log(canSum(targetSum1, arr1));
 };
