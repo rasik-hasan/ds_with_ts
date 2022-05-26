@@ -159,4 +159,6 @@ import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 
 //testHowSum();
 
-testMinCostClimb();
+//testMinCostClimb();
+
+testHouseRobber();

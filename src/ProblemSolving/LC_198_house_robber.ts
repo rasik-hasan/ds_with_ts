@@ -10,31 +10,44 @@ export const testHouseRobber = () => {
   ];
   //console.log(test1.slice(2, test1.length));
 
-  function rob(nums: number[], memo: { [key: string]: number } = {}): number {
-    //console.log(nums);
-    if (nums.length === 0) {
-      return 0;
+  // function rob(nums: number[], memo: { [key: string]: number } = {}): number {
+  //   //console.log(nums);
+  //   if (nums.length === 0) {
+  //     return 0;
+  //   }
+  //   if (nums.length === 1) {
+  //     return nums[0];
+  //   }
+
+  //   let max = 0;
+
+  //   if (nums.toString() in memo) {
+  //     return memo[nums.toString()];
+  //   }
+
+  //   nums.forEach((value, index) => {
+  //     const v = rob(nums.slice(index + 2, nums.length), memo) + value;
+  //     if (v > max) {
+  //       max = v;
+  //     }
+  //   });
+
+  //   memo[nums.toString()] = max;
+  //   return max;
+  // }
+
+  function rob(nums: number[]): number {
+    const maxArr = [];
+    maxArr[0] = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+      maxArr[i] = Math.max(maxArr[i - 1], nums[i] + (maxArr[i - 2] ?? 0));
     }
-    if (nums.length === 1) {
-      return nums[0];
-    }
 
-    let max = 0;
+    //console.log(maxArr);
 
-    if (nums.toString() in memo) {
-      return memo[nums.toString()];
-    }
-
-    nums.forEach((value, index) => {
-      const v = rob(nums.slice(index + 2, nums.length), memo) + value;
-      if (v > max) {
-        max = v;
-      }
-    });
-
-    memo[nums.toString()] = max;
-    return max;
+    return maxArr[maxArr.length - 1];
   }
 
-  console.log(rob(test3));
+  console.log(rob(test4));
 };
