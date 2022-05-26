@@ -71,33 +71,47 @@ export const testMinCostClimb = () => {
     415, 874, 399, 613, 816, 613, 467, 191,
   ];
 
-  function minCostClimbingStairs(
-    cost: number[],
-    memo: { [key: string]: number } = {}
-  ): number {
-    if (cost.toString() in memo) {
-      return memo[cost.toString()];
+  //   function minCostClimbingStairs(
+  //     cost: number[],
+  //     memo: { [key: string]: number } = {}
+  //   ): number {
+  //     if (cost.toString() in memo) {
+  //       return memo[cost.toString()];
+  //     }
+  //     if (cost.length === 0) {
+  //       return 0;
+  //     }
+
+  //     //for 1 step
+  //     const costCopy1 = [...cost];
+  //     const residue1 = costCopy1.shift() ?? 0;
+  //     //console.log("residue1:", residue1, cost);
+  //     const result1 = residue1 + minCostClimbingStairs(costCopy1, memo);
+
+  //     //for 2 step
+
+  //     const costCopy = [...costCopy1];
+  //     const residue2 = costCopy.shift() ?? 0;
+  //     //console.log("residue2:", residue2, cost);
+  //     const result2 = residue2 + minCostClimbingStairs(costCopy, memo);
+
+  //     const result = Math.min(result1, result2);
+  //     memo[cost.toString()] = result;
+  //     return result;
+  //   }
+
+  function minCostClimbingStairs(cost: number[]): number {
+    cost.push(0);
+    //iterating from the end of the array to update each index's distance values to the end.
+
+    for (let i = cost.length - 3; i >= 0; i--) {
+      const singleJump = cost[i + 1] + cost[i];
+      const doubleJump = cost[i + 2] + cost[i];
+
+      cost[i] = Math.min(singleJump, doubleJump);
     }
-    if (cost.length === 0) {
-      return 0;
-    }
 
-    //for 1 step
-    const costCopy1 = [...cost];
-    const residue1 = costCopy1.shift() ?? 0;
-    //console.log("residue1:", residue1, cost);
-    const result1 = residue1 + minCostClimbingStairs(costCopy1, memo);
-
-    //for 2 step
-
-    const costCopy = [...costCopy1];
-    const residue2 = costCopy.shift() ?? 0;
-    //console.log("residue2:", residue2, cost);
-    const result2 = residue2 + minCostClimbingStairs(costCopy, memo);
-
-    const result = Math.min(result1, result2);
-    memo[cost.toString()] = result;
-    return result;
+    return Math.min(cost[0], cost[1]);
   }
 
   console.log(minCostClimbingStairs(cost1));
