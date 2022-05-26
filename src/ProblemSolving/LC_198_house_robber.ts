@@ -8,6 +8,7 @@ export const testHouseRobber = () => {
     58, 170, 110, 236, 81, 90, 222, 160, 165, 195, 187, 199, 114, 235, 197, 187,
     69, 129, 64, 214, 228, 78, 188, 67, 205, 94, 205, 169, 241, 202, 144, 240,
   ];
+  const test5 = [2, 3, 2];
   //console.log(test1.slice(2, test1.length));
 
   // function rob(nums: number[], memo: { [key: string]: number } = {}): number {
@@ -49,5 +50,5 @@ export const testHouseRobber = () => {
     return maxArr[maxArr.length - 1];
   }
 
-  console.log(rob(test4));
+  console.log(rob(test5));
 };
