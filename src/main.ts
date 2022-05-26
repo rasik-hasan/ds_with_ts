@@ -49,6 +49,8 @@ import { testSymmetricTree } from "./ProblemSolving/LC-101_symmetric-tree";
 import { testFloodFill } from "./ProblemSolving/LC-733_flood_fill";
 import { testGridTraveler } from "./ProblemSolving/gridTraveler";
 import { testCanSum } from "./ProblemSolving/canSum";
+import { testTribonacciSeries } from "./ProblemSolving/LC-1137_tribonacci";
+import { testHowSum } from "./ProblemSolving/howSum";
 
 //testQueue();
 
@@ -150,4 +152,8 @@ import { testCanSum } from "./ProblemSolving/canSum";
 
 //testGridTraveler();
 
-testCanSum();
+//testCanSum();
+
+//testTribonacciSeries();
+
+testHowSum();
