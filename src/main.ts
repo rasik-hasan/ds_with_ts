@@ -51,6 +51,7 @@ import { testGridTraveler } from "./ProblemSolving/gridTraveler";
 import { testCanSum } from "./ProblemSolving/canSum";
 import { testTribonacciSeries } from "./ProblemSolving/LC-1137_tribonacci";
 import { testHowSum } from "./ProblemSolving/howSum";
+import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 
 //testQueue();
 
@@ -156,4 +157,6 @@ import { testHowSum } from "./ProblemSolving/howSum";
 
 //testTribonacciSeries();
 
-testHowSum();
+//testHowSum();
+
+testMinCostClimb();
