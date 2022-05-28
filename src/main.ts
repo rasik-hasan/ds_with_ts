@@ -53,6 +53,7 @@ import { testTribonacciSeries } from "./ProblemSolving/LC-1137_tribonacci";
 import { testHowSum } from "./ProblemSolving/howSum";
 import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
+import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
 
 //testQueue();
 
@@ -164,4 +165,6 @@ import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
 
 //testHouseRobber();
 
-testMissingNumber();
+//testMissingNumber();
+
+testDeleteAndEarn();
