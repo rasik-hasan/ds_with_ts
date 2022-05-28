@@ -52,6 +52,7 @@ import { testCanSum } from "./ProblemSolving/canSum";
 import { testTribonacciSeries } from "./ProblemSolving/LC-1137_tribonacci";
 import { testHowSum } from "./ProblemSolving/howSum";
 import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
+import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
 
 //testQueue();
 
@@ -161,4 +162,6 @@ import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 
 //testMinCostClimb();
 
-testHouseRobber();
+//testHouseRobber();
+
+testMissingNumber();
