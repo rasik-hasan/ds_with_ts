@@ -54,6 +54,7 @@ import { testHowSum } from "./ProblemSolving/howSum";
 import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
 import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
+import { testGenerics } from "./typescriptExperiment/Generics";
 
 //testQueue();
 
@@ -167,4 +168,6 @@ import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
 
 //testMissingNumber();
 
-testDeleteAndEarn();
+//testDeleteAndEarn();
+
+testGenerics();
