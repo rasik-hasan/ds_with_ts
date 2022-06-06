@@ -86,23 +86,27 @@ export const test_intersection_linked_lists = () => {
     let ptrHeadA = headA;
     let ptrHeadB = headB;
 
-    while (ptrHeadA !== ptrHeadB) {
+    let flipCount = 0;
+
+    while (ptrHeadA !== ptrHeadB && flipCount < 4) {
       if (ptrHeadA!.next === null) {
         ptrHeadA = headB;
+        flipCount++;
       } else {
         ptrHeadA = ptrHeadA!.next;
       }
 
       if (ptrHeadB!.next === null) {
         ptrHeadB = headA;
+        flipCount++;
       } else {
         ptrHeadB = ptrHeadB!.next;
       }
     }
 
-    return ptrHeadA;
+    return flipCount === 4 ? null : ptrHeadA;
   }
 
-  console.log(getIntersectionNode(inputA3, inputB3));
+  console.log(getIntersectionNode(inputA2, inputB2));
   //console.log(inputA1, inputB1);
 };
