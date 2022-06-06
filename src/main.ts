@@ -55,6 +55,7 @@ import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
 import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
 import { testGenerics } from "./typescriptExperiment/Generics";
+import { test_intersection_linked_lists } from "./ProblemSolving/160_intersection_linked_lists";
 
 //testQueue();
 
@@ -170,4 +171,6 @@ import { testGenerics } from "./typescriptExperiment/Generics";
 
 //testDeleteAndEarn();
 
-testGenerics();
+//testGenerics();
+
+test_intersection_linked_lists();
