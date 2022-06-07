@@ -57,6 +57,7 @@ import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
 import { testGenerics } from "./typescriptExperiment/Generics";
 import { test_intersection_linked_lists } from "./ProblemSolving/160_intersection_linked_lists";
 import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_two_arrays2";
+import { testMergeTwoSortedList } from "./ProblemSolving/LC-21_merge_two_sorted_list";
 
 //testQueue();
 
@@ -96,7 +97,7 @@ import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_tw
 
 //testAssignCookies();
 
-//testMerge();
+testMerge();
 
 //testSameTree();
 
@@ -176,4 +177,6 @@ import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_tw
 
 //test_intersection_linked_lists();
 
-testIntersection_two();
+// testIntersection_two();
+
+//testMergeTwoSortedList();
