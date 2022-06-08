@@ -42,35 +42,58 @@ export const reverseLinkedList = () => {
     },
   };
 
+  //   function reverseList(head: ListNode | null): ListNode | null {
+  //     if (head === null || head.next === null) {
+  //       return head;
+  //     }
+
+  //     const stack = [];
+  //     let llItr = head;
+
+  //     while (llItr !== null) {
+  //       stack.push(llItr);
+  //       llItr = llItr.next!;
+  //     }
+
+  //     let first = stack.pop();
+  //     let newHead = first!;
+  //     let second: any;
+
+  //     while (stack.length !== 0) {
+  //       second = stack.pop();
+
+  //       first!.next = second!;
+  //       first = second;
+  //     }
+  //     second!.next = null;
+
+  //     return newHead;
+  //   }
+
+  //slower
   function reverseList(head: ListNode | null): ListNode | null {
     if (head === null || head.next === null) {
       return head;
     }
 
-    const stack = [];
-    let llItr = head;
+    let newHead: any;
+    let llItr: ListNode | null = head;
+    let prev = null;
+    let tempNext;
 
     while (llItr !== null) {
-      stack.push(llItr);
-      llItr = llItr.next!;
+      if (llItr.next === null) {
+        newHead = llItr;
+      }
+
+      tempNext = llItr.next;
+      llItr.next = prev;
+      prev = llItr;
+      llItr = tempNext;
     }
 
-    let first = stack.pop();
-    let newHead = first!;
-    let second: any;
-
-    while (stack.length !== 0) {
-      second = stack.pop();
-
-      first!.next = second!;
-      first = second;
-    }
-    second!.next = null;
-
-    return newHead;
+    return newHead!;
   }
-
-  //console.log(reverseList(input1));
 
   console.log(util.inspect(reverseList(input3), false, null, true));
 };
