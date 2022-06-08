@@ -59,6 +59,7 @@ import { test_intersection_linked_lists } from "./ProblemSolving/160_intersectio
 import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_two_arrays2";
 import { testMergeTwoSortedList } from "./ProblemSolving/LC-21_merge_two_sorted_list";
 import { reverseLinkedList } from "./ProblemSolving/LC-206_reverse_linked_list";
+import { test_remove_palin } from "./ProblemSolving/LC-1332_ remove_palin_subseq";
 
 //testQueue();
 
@@ -182,4 +183,6 @@ import { reverseLinkedList } from "./ProblemSolving/LC-206_reverse_linked_list";
 
 //testMergeTwoSortedList();
 
-reverseLinkedList();
+//reverseLinkedList();
+
+test_remove_palin();
