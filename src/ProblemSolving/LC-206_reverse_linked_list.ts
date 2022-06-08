@@ -76,24 +76,19 @@ export const reverseLinkedList = () => {
       return head;
     }
 
-    let newHead: any;
     let llItr: ListNode | null = head;
     let prev = null;
     let tempNext;
 
     while (llItr !== null) {
-      if (llItr.next === null) {
-        newHead = llItr;
-      }
-
       tempNext = llItr.next;
       llItr.next = prev;
       prev = llItr;
       llItr = tempNext;
     }
 
-    return newHead!;
+    return prev!;
   }
 
-  console.log(util.inspect(reverseList(input3), false, null, true));
+  console.log(util.inspect(reverseList(input1), false, null, true));
 };
