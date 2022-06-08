@@ -58,6 +58,7 @@ import { testGenerics } from "./typescriptExperiment/Generics";
 import { test_intersection_linked_lists } from "./ProblemSolving/160_intersection_linked_lists";
 import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_two_arrays2";
 import { testMergeTwoSortedList } from "./ProblemSolving/LC-21_merge_two_sorted_list";
+import { reverseLinkedList } from "./ProblemSolving/LC-206_reverse_linked_list";
 
 //testQueue();
 
@@ -97,7 +98,7 @@ import { testMergeTwoSortedList } from "./ProblemSolving/LC-21_merge_two_sorted_
 
 //testAssignCookies();
 
-testMerge();
+//testMerge();
 
 //testSameTree();
 
@@ -180,3 +181,5 @@ testMerge();
 // testIntersection_two();
 
 //testMergeTwoSortedList();
+
+reverseLinkedList();
