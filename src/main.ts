@@ -182,10 +182,10 @@ import { testLinkedListCycle } from "./ProblemSolving/LC-141_linkedList_cycle";
 
 // testIntersection_two();
 
-//testMergeTwoSortedList();
+testMergeTwoSortedList();
 
 //reverseLinkedList();
 
 //test_remove_palin();
 
-testLinkedListCycle();
+//testLinkedListCycle();
