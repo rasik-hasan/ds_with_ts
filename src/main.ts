@@ -55,12 +55,13 @@ import { testMinCostClimb } from "./ProblemSolving/LC-746_min_cost_climb";
 import { testMissingNumber } from "./ProblemSolving/LC_268-missing_number";
 import { testDeleteAndEarn } from "./ProblemSolving/LC-740_delete_and_earn";
 import { testGenerics } from "./typescriptExperiment/Generics";
-import { test_intersection_linked_lists } from "./ProblemSolving/160_intersection_linked_lists";
+import { test_intersection_linked_lists } from "./ProblemSolving/LC-160_intersection_linked_lists";
 import { testIntersection_two } from "./ProblemSolving/LC-250_intersection_of_two_arrays2";
 import { testMergeTwoSortedList } from "./ProblemSolving/LC-21_merge_two_sorted_list";
 import { reverseLinkedList } from "./ProblemSolving/LC-206_reverse_linked_list";
 import { test_remove_palin } from "./ProblemSolving/LC-1332_ remove_palin_subseq";
 import { testLinkedListCycle } from "./ProblemSolving/LC-141_linkedList_cycle";
+import { testTwoSum_2 } from "./ProblemSolving/LC-167_two_sum_2";
 
 //testQueue();
 
@@ -182,10 +183,12 @@ import { testLinkedListCycle } from "./ProblemSolving/LC-141_linkedList_cycle";
 
 // testIntersection_two();
 
-testMergeTwoSortedList();
+//testMergeTwoSortedList();
 
 //reverseLinkedList();
 
 //test_remove_palin();
 
 //testLinkedListCycle();
+
+testTwoSum_2();
