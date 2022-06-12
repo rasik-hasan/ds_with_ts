@@ -9,7 +9,7 @@ export const testTwoSum_2 = () => {
   const numbers3 = [-1, 0],
     target3 = -1; // [1,2]
 
-  const number4 = [-3, -6, 0, 11, 15, 17],
+  const number4 = [-7, -6, 0, 11, 15, 17],
     target4 = 9;
 
   function twoSum(numbers: number[], target: number): number[] {
