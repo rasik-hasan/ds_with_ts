@@ -62,6 +62,7 @@ import { reverseLinkedList } from "./ProblemSolving/LC-206_reverse_linked_list";
 import { test_remove_palin } from "./ProblemSolving/LC-1332_ remove_palin_subseq";
 import { testLinkedListCycle } from "./ProblemSolving/LC-141_linkedList_cycle";
 import { testTwoSum_2 } from "./ProblemSolving/LC-167_two_sum_2";
+import { testLongestSubstringNoRepeat } from "./ProblemSolving/LC-3_longest_substring_no_repeat";
 
 //testQueue();
 
@@ -191,4 +192,6 @@ import { testTwoSum_2 } from "./ProblemSolving/LC-167_two_sum_2";
 
 //testLinkedListCycle();
 
-testTwoSum_2();
+//testTwoSum_2();
+
+testLongestSubstringNoRepeat();
