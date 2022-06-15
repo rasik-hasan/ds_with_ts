@@ -63,6 +63,7 @@ import { test_remove_palin } from "./ProblemSolving/LC-1332_ remove_palin_subseq
 import { testLinkedListCycle } from "./ProblemSolving/LC-141_linkedList_cycle";
 import { testTwoSum_2 } from "./ProblemSolving/LC-167_two_sum_2";
 import { testLongestSubstringNoRepeat } from "./ProblemSolving/LC-3_longest_substring_no_repeat";
+import { testFizzbuzz } from "./ProblemSolving/HR_fizzbuzz";
 
 //testQueue();
 
@@ -194,4 +195,6 @@ import { testLongestSubstringNoRepeat } from "./ProblemSolving/LC-3_longest_subs
 
 //testTwoSum_2();
 
-testLongestSubstringNoRepeat();
+//testLongestSubstringNoRepeat();
+
+testFizzbuzz();
