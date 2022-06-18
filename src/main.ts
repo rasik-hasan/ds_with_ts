@@ -114,7 +114,7 @@ import { testgroupAnagrams } from "./ProblemSolving/LC-49_group_anagrams";
 
 //testBFS();
 
-//longestConsequtiveSeq();
+longestConsequtiveSeq();
 
 //removeDuplicates();
 
@@ -198,4 +198,4 @@ import { testgroupAnagrams } from "./ProblemSolving/LC-49_group_anagrams";
 
 //testLongestSubstringNoRepeat();
 
-testgroupAnagrams();
+//testgroupAnagrams();

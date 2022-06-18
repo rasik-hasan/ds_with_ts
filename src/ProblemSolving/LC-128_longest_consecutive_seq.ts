@@ -9,49 +9,39 @@ export const longestConsequtiveSeq = () => {
   const input6 = [0];
   const input7 = [0, 0];
   const input8 = [1, 2, 0, 0];
+  const input9 = [1, 2, 0, 1];
 
   function longestConsecutive(nums: number[]): number {
     if (nums.length === 1) {
       return 1;
     }
 
+    if (nums.length === 0) {
+      return 0;
+    }
+
+    let max = 0;
+    let localMax = 0;
+
     nums.sort((a, b) => a - b);
-    console.log(nums);
-    const diffs = [];
 
-    for (let i = 0; i < nums.length - 1; i++) {
-      const diff = nums[i + 1] - nums[i];
-
-      if (diff === 1) {
-        diffs.push(1);
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] === nums[i - 1]) {
+        continue;
+      }
+      if (nums[i] - 1 === nums[i - 1]) {
+        localMax += 1;
       } else {
-        diffs.push(0);
+        localMax = 1;
+      }
+
+      if (localMax > max) {
+        max = localMax;
       }
     }
 
-    console.log(diffs);
-
-    const sums = [];
-
-    let sum = 0;
-
-    for (let i = 0; i <= diffs.length; i++) {
-      if (diffs[i] === 1) {
-        sum += 1;
-      } else {
-        if (sum >= 1) {
-          sums.push(sum);
-          sum = 0;
-        }
-      }
-    }
-
-    console.log(sums);
-
-    const answer = Math.max(...sums) + 1;
-
-    return answer > 0 ? answer : 0;
+    return max;
   }
 
-  console.log(longestConsecutive(input6));
+  console.log(longestConsecutive(input9));
 };
