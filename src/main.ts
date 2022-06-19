@@ -65,6 +65,7 @@ import { testTwoSum_2 } from "./ProblemSolving/LC-167_two_sum_2";
 import { testLongestSubstringNoRepeat } from "./ProblemSolving/LC-3_longest_substring_no_repeat";
 import { testFizzbuzz } from "./ProblemSolving/HR_fizzbuzz";
 import { testgroupAnagrams } from "./ProblemSolving/LC-49_group_anagrams";
+import { testValidPalindrome } from "./ProblemSolving/LC-125_isValidPalindrome";
 
 //testQueue();
 
@@ -199,3 +200,5 @@ longestConsequtiveSeq();
 //testLongestSubstringNoRepeat();
 
 //testgroupAnagrams();
+
+testValidPalindrome();
