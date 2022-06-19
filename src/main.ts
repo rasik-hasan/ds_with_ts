@@ -66,6 +66,7 @@ import { testLongestSubstringNoRepeat } from "./ProblemSolving/LC-3_longest_subs
 import { testFizzbuzz } from "./ProblemSolving/HR_fizzbuzz";
 import { testgroupAnagrams } from "./ProblemSolving/LC-49_group_anagrams";
 import { testValidPalindrome } from "./ProblemSolving/LC-125_isValidPalindrome";
+import { testTopKFreq } from "./ProblemSolving/LC-347_topKfreqElements";
 
 //testQueue();
 
@@ -201,4 +202,6 @@ longestConsequtiveSeq();
 
 //testgroupAnagrams();
 
-testValidPalindrome();
+//testValidPalindrome();
+
+testTopKFreq();
