@@ -68,6 +68,7 @@ import { testgroupAnagrams } from "./ProblemSolving/LC-49_group_anagrams";
 import { testValidPalindrome } from "./ProblemSolving/LC-125_isValidPalindrome";
 import { testTopKFreq } from "./ProblemSolving/LC-347_topKfreqElements";
 import { testProduct } from "./ProblemSolving/LC-238_product_except_self";
+import { gasStation } from "./ProblemSolving/LC_134_gas_station";
 
 //testQueue();
 
@@ -207,4 +208,6 @@ import { testProduct } from "./ProblemSolving/LC-238_product_except_self";
 
 //testTopKFreq();
 
-testProduct();
+//testProduct();
+
+gasStation();
