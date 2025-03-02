@@ -70,6 +70,8 @@ import { testTopKFreq } from "./ProblemSolving/LC-347_topKfreqElements";
 import { testProduct } from "./ProblemSolving/LC-238_product_except_self";
 import { gasStation } from "./ProblemSolving/LC_134_gas_station";
 import { testFindMaxAverage } from "./ProblemSolving/LC-643_max_avg_sub";
+import { testminSubArrayLen } from "./ProblemSolving/LC-209_smallest_subarray";
+import { testSockMerchant } from "./ProblemSolving/HR_sales_by_match";
 
 //testQueue();
 
@@ -213,4 +215,8 @@ import { testFindMaxAverage } from "./ProblemSolving/LC-643_max_avg_sub";
 
 // gasStation();
 
-testFindMaxAverage();
+//testFindMaxAverage();
+
+// testminSubArrayLen();
+
+testSockMerchant();
