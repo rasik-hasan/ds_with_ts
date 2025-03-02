@@ -73,6 +73,7 @@ import { testFindMaxAverage } from "./ProblemSolving/LC-643_max_avg_sub";
 import { testminSubArrayLen } from "./ProblemSolving/LC-209_smallest_subarray";
 import { testSockMerchant } from "./ProblemSolving/HR_sales_by_match";
 import { testCountingValley } from "./ProblemSolving/HR_counting_valleys";
+import { testJumpingClouds } from "./ProblemSolving/HR_jumping_clouds";
 
 //testQueue();
 
@@ -222,4 +223,6 @@ import { testCountingValley } from "./ProblemSolving/HR_counting_valleys";
 
 // testSockMerchant();
 
-testCountingValley();
+// testCountingValley();
+
+testJumpingClouds();
