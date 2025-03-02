@@ -72,6 +72,7 @@ import { gasStation } from "./ProblemSolving/LC_134_gas_station";
 import { testFindMaxAverage } from "./ProblemSolving/LC-643_max_avg_sub";
 import { testminSubArrayLen } from "./ProblemSolving/LC-209_smallest_subarray";
 import { testSockMerchant } from "./ProblemSolving/HR_sales_by_match";
+import { testCountingValley } from "./ProblemSolving/HR_counting_valleys";
 
 //testQueue();
 
@@ -219,4 +220,6 @@ import { testSockMerchant } from "./ProblemSolving/HR_sales_by_match";
 
 // testminSubArrayLen();
 
-testSockMerchant();
+// testSockMerchant();
+
+testCountingValley();
