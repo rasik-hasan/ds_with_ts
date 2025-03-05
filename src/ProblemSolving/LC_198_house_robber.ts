@@ -45,10 +45,10 @@ export const testHouseRobber = () => {
       maxArr[i] = Math.max(maxArr[i - 1], nums[i] + (maxArr[i - 2] ?? 0));
     }
 
-    //console.log(maxArr);
+    console.log(maxArr);
 
     return maxArr[maxArr.length - 1];
   }
 
-  console.log(rob(test5));
+  console.log(rob(test1));
 };

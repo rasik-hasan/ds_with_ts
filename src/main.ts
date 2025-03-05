@@ -74,6 +74,8 @@ import { testminSubArrayLen } from "./ProblemSolving/LC-209_smallest_subarray";
 import { testSockMerchant } from "./ProblemSolving/HR_sales_by_match";
 import { testCountingValley } from "./ProblemSolving/HR_counting_valleys";
 import { testJumpingClouds } from "./ProblemSolving/HR_jumping_clouds";
+import { testHR_maxArray_sum } from "./ProblemSolving/Archive (2)/HR_max_array_sum";
+import { test_test } from "./ProblemSolving/test";
 
 //testQueue();
 
@@ -183,7 +185,7 @@ import { testJumpingClouds } from "./ProblemSolving/HR_jumping_clouds";
 
 //testMinCostClimb();
 
-//testHouseRobber();
+// testHouseRobber();
 
 //testMissingNumber();
 
@@ -225,4 +227,8 @@ import { testJumpingClouds } from "./ProblemSolving/HR_jumping_clouds";
 
 // testCountingValley();
 
-testJumpingClouds();
+// testJumpingClouds();
+
+// testHR_maxArray_sum();
+
+test_test();
