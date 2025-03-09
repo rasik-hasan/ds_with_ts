@@ -76,6 +76,7 @@ import { testCountingValley } from "./ProblemSolving/HR_counting_valleys";
 import { testJumpingClouds } from "./ProblemSolving/HR_jumping_clouds";
 import { testHR_maxArray_sum } from "./ProblemSolving/Archive (2)/HR_max_array_sum";
 import { test_test } from "./ProblemSolving/test";
+import { testDistinctSubsequence } from "./ProblemSolving/LC_1081-distinct-subsequence";
 
 //testQueue();
 
@@ -231,4 +232,6 @@ import { test_test } from "./ProblemSolving/test";
 
 // testHR_maxArray_sum();
 
-test_test();
+// test_test();
+
+testDistinctSubsequence();
