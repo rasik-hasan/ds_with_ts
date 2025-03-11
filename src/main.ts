@@ -78,6 +78,7 @@ import { testHR_maxArray_sum } from "./ProblemSolving/Archive (2)/HR_max_array_s
 import { test_test } from "./ProblemSolving/test";
 import { testDistinctSubsequence } from "./ProblemSolving/LC_1081-distinct-subsequence";
 import { testCountBinarySubstrings } from "./ProblemSolving/LC_696_count_binary_substrings";
+import { testAbbreviation } from "./ProblemSolving/HR_abbreviation";
 
 //testQueue();
 
@@ -237,4 +238,6 @@ import { testCountBinarySubstrings } from "./ProblemSolving/LC_696_count_binary_
 
 // testDistinctSubsequence();
 
-testCountBinarySubstrings();
+// testCountBinarySubstrings();
+
+testAbbreviation();
