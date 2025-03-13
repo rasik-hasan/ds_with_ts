@@ -79,6 +79,7 @@ import { test_test } from "./ProblemSolving/test";
 import { testDistinctSubsequence } from "./ProblemSolving/LC_1081-distinct-subsequence";
 import { testCountBinarySubstrings } from "./ProblemSolving/LC_696_count_binary_substrings";
 import { testAbbreviation } from "./ProblemSolving/HR_abbreviation";
+import { tech_magic_test_test } from "./ProblemSolving/TechMagicTest";
 
 //testQueue();
 
@@ -240,4 +241,6 @@ import { testAbbreviation } from "./ProblemSolving/HR_abbreviation";
 
 // testCountBinarySubstrings();
 
-testAbbreviation();
+// testAbbreviation();
+
+tech_magic_test_test();
