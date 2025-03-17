@@ -80,6 +80,7 @@ import { testDistinctSubsequence } from "./ProblemSolving/LC_1081-distinct-subse
 import { testCountBinarySubstrings } from "./ProblemSolving/LC_696_count_binary_substrings";
 import { testAbbreviation } from "./ProblemSolving/HR_abbreviation";
 import { tech_magic_test_test } from "./ProblemSolving/TechMagicTest";
+import { shiftTest } from "./ProblemSolving/ShiftTest";
 
 //testQueue();
 
@@ -235,7 +236,7 @@ import { tech_magic_test_test } from "./ProblemSolving/TechMagicTest";
 
 // testHR_maxArray_sum();
 
-// test_test();
+test_test();
 
 // testDistinctSubsequence();
 
@@ -243,4 +244,6 @@ import { tech_magic_test_test } from "./ProblemSolving/TechMagicTest";
 
 // testAbbreviation();
 
-tech_magic_test_test();
+// tech_magic_test_test();
+
+// shiftTest();

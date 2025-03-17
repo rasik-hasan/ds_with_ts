@@ -12,8 +12,19 @@ export const test_test = () => {
 
     let firstString = words[0];
 
+    console.log("first string: ", firstString);
+
     for (let i = 0; i < firstString.length; i++) {
       for (let j = 1; j < words.length; j++) {
+        console.log(
+          "firstString",
+          i,
+          firstString[i],
+          "words[j]: ",
+          words[j],
+          "words[j][i]",
+          words[j][i]
+        );
         if (firstString[i] !== words[j][i]) {
           return firstString.slice(0, i);
         }
@@ -24,13 +35,13 @@ export const test_test = () => {
   }
 
   console.log(longest_common_prefix(["cat", "catalog", "catch"])); // "cat"
-  console.log(longest_common_prefix(["catalog", "catch", "category", "cat"])); // "cat"
-  console.log(
-    longest_common_prefix(["plain", "plan", "plant", "plastic", "planet"])
-  ); // "pla"
-  console.log(longest_common_prefix(["blue", "green", "yellow", "red"])); // ""
-  console.log(longest_common_prefix(["the first", "the second", "the third"])); // "the "
-  console.log(longest_common_prefix(["one word"])); // "one word"
-  console.log(longest_common_prefix([""])); // return ""
-  console.log(longest_common_prefix([])); // return ""
+  // console.log(longest_common_prefix(["catalog", "catch", "category", "cat"])); // "cat"
+  // console.log(
+  //   longest_common_prefix(["plain", "plan", "plant", "plastic", "planet"])
+  // ); // "pla"
+  // console.log(longest_common_prefix(["blue", "green", "yellow", "red"])); // ""
+  // console.log(longest_common_prefix(["the first", "the second", "the third"])); // "the "
+  // console.log(longest_common_prefix(["one word"])); // "one word"
+  // console.log(longest_common_prefix([""])); // return ""
+  // console.log(longest_common_prefix([])); // return ""
 };
