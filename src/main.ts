@@ -81,6 +81,9 @@ import { testCountBinarySubstrings } from "./ProblemSolving/LC_696_count_binary_
 import { testAbbreviation } from "./ProblemSolving/HR_abbreviation";
 import { tech_magic_test_test } from "./ProblemSolving/TechMagicTest";
 import { shiftTest } from "./ProblemSolving/ShiftTest";
+import { testIndexOfFirstOccurence } from "./ProblemSolving/LC_28_indexOfFirstOccurrence";
+import { testSensyn } from "./ProblemSolving/sensyTest";
+import { test_substring_count } from "./ProblemSolving/getsubStringCount";
 
 //testQueue();
 
@@ -236,9 +239,9 @@ import { shiftTest } from "./ProblemSolving/ShiftTest";
 
 // testHR_maxArray_sum();
 
-test_test();
+// test_test();
 
-// testDistinctSubsequence();
+testDistinctSubsequence();
 
 // testCountBinarySubstrings();
 
@@ -247,3 +250,11 @@ test_test();
 // tech_magic_test_test();
 
 // shiftTest();
+
+// testIndexOfFirstOccurence();
+
+// testSensyn();
+
+// test_substring_count();
+
+// testCountBinarySubstrings();

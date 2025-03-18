@@ -16,6 +16,8 @@ export const testCountBinarySubstrings = () => {
 
     countArr.push(count);
 
+    console.log("countArr: ", countArr);
+
     for (let i = 1; i < countArr.length; i++) {
       result += Math.min(countArr[i], countArr[i - 1]);
     }
@@ -27,6 +29,7 @@ export const testCountBinarySubstrings = () => {
 
   const test1 = "00110011";
   const test2 = "10101";
+  const test3 = "00011100";
 
-  console.log(countBinarySubstrings(test2));
+  console.log(countBinarySubstrings(test3));
 };

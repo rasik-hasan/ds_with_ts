@@ -1,4 +1,4 @@
-export const test_test = () => {
+export const test_substring_count = () => {
   console.log("ready");
 
   function getSubstringCount(s: string): number {
@@ -7,25 +7,52 @@ export const test_test = () => {
     let finalCount = 0;
 
     for (let i = 1; i < s.length; i++) {
+      console.log("s[i]: ", s[i], "s[i-1]: ", s[i - 1]);
       if (s[i] === s[i - 1]) {
         substringCount++;
+        console.log("substringCount: ", substringCount);
       } else {
+        console.log(
+          "FinalCount: ",
+          finalCount,
+          "substringCount: ",
+          substringCount,
+          "substringCountPrevious: ",
+          substrintCountPrevious
+        );
         finalCount +=
           substringCount < substrintCountPrevious
             ? substringCount
             : substrintCountPrevious;
         substrintCountPrevious = substringCount;
         substringCount = 1;
+
+        console.log(
+          "FinalCount: ",
+          finalCount,
+          "substringCount: ",
+          substringCount,
+          "substringCountPrevious: ",
+          substrintCountPrevious
+        );
       }
     }
 
+    console.log(
+      "Outside loop FinalCount: ",
+      finalCount,
+      "substringCount: ",
+      substringCount,
+      "substringCountPrevious: ",
+      substrintCountPrevious
+    );
     return (finalCount +=
       substringCount < substrintCountPrevious
         ? substringCount
         : substrintCountPrevious);
   }
 
-  const test1 = "000110"; //4 //01 //10 //1100 //01
+  const test1 = "00110011"; //4 "0011", "01", "1100", "10", "0011", and "01"
 
   console.log(getSubstringCount(test1));
 };
